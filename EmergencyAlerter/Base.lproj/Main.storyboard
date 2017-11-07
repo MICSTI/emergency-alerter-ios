@@ -27,7 +27,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="n8l-OF-cE6"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Text" image="ic_sms_failed_48pt" id="UpE-Xv-m6i"/>
+                    <tabBarItem key="tabBarItem" title="Text" image="ic_sms_failed" id="UpE-Xv-m6i"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XE8-Wg-JYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,7 +52,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="aBo-8i-NdR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Police" image="ic_account_balance_48pt" id="C8e-Ob-d0g"/>
+                    <tabBarItem key="tabBarItem" title="Police" image="ic_account_balance" id="C8e-Ob-d0g"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kNr-jK-aNU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,7 +171,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="hw8-pC-UUV"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Call" image="ic_phone_in_talk_48pt" id="nNk-mK-tsg"/>
+                    <tabBarItem key="tabBarItem" title="Call" image="ic_phone_in_talk" id="nNk-mK-tsg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAg-vK-i7U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,7 +201,7 @@
         <scene sceneID="J1u-K5-Q0h">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7li-8c-rNE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Options" image="settings" id="mUl-Jy-kjF"/>
+                    <tabBarItem key="tabBarItem" title="Options" image="ic_settings" id="mUl-Jy-kjF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9kX-ZF-Zlf">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -218,9 +218,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_account_balance_48pt" width="48" height="48"/>
-        <image name="ic_phone_in_talk_48pt" width="48" height="48"/>
-        <image name="ic_sms_failed_48pt" width="48" height="48"/>
-        <image name="settings" width="48" height="48"/>
+        <image name="ic_account_balance" width="24" height="24"/>
+        <image name="ic_phone_in_talk" width="24" height="24"/>
+        <image name="ic_settings" width="24" height="24"/>
+        <image name="ic_sms_failed" width="24" height="24"/>
     </resources>
 </document>
