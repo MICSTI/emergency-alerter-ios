@@ -1,15 +1,86 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13196" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch42" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13051"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="EmergencyAlerter_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" title="Call" id="HSW-cd-ojD">
+                            <color key="backgroundColor" red="1" green="0.059605572920000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="oDZ-M7-s8S" kind="push" id="AZg-ec-HPY"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Message" id="aJF-0l-BZs">
+                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="Rua-xo-V5e" kind="push" id="IHR-2C-p8x"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Police Stations" id="Sg1-wt-MQh">
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="eY4-RH-yb8" kind="push" id="hs3-SX-uQ1"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Options" id="UOl-jI-3Tx">
+                            <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="VmL-2k-euH" kind="push" id="OZJ-m3-Yec"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
             </objects>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="DOo-pd-uZw">
+            <objects>
+                <controller id="oDZ-M7-s8S">
+                    <items>
+                        <button width="1" height="1" alignment="left" title="Call" id="6PV-Tn-qac">
+                            <color key="backgroundColor" red="1" green="0.041616200206797127" blue="0.28143822890046666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="416" y="-156"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="4as-CH-vjF">
+            <objects>
+                <controller id="eY4-RH-yb8"/>
+            </objects>
+            <point key="canvasLocation" x="498" y="211"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="8vf-cb-x35">
+            <objects>
+                <controller id="VmL-2k-euH"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="447"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="yDE-k0-bwZ">
+            <objects>
+                <controller id="Rua-xo-V5e">
+                    <items>
+                        <button width="1" height="1" alignment="left" title="Text" id="FPz-xN-fxE">
+                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="674" y="-165"/>
         </scene>
     </scenes>
 </document>
