@@ -17,14 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0P-t3-e2O">
-                                <rect key="frame" x="0.0" y="285" width="375" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0P-t3-e2O">
+                                <rect key="frame" x="20" y="20" width="335" height="570"/>
+                                <color key="backgroundColor" red="0.82745098039215681" green="0.32941176470588235" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="bt"/>
-                                <state key="normal" title="Send Sms"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                <state key="normal" title="Send Sms">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="n0P-t3-e2O" firstAttribute="leading" secondItem="n8l-OF-cE6" secondAttribute="leading" constant="20" id="23w-sq-q5M"/>
+                            <constraint firstItem="n8l-OF-cE6" firstAttribute="trailing" secondItem="n0P-t3-e2O" secondAttribute="trailing" constant="20" id="e38-Pm-aVq"/>
+                            <constraint firstItem="n0P-t3-e2O" firstAttribute="top" secondItem="n8l-OF-cE6" secondAttribute="top" id="iDq-Aw-3IY"/>
+                            <constraint firstItem="n8l-OF-cE6" firstAttribute="bottom" secondItem="n0P-t3-e2O" secondAttribute="bottom" constant="28" id="iNL-yZ-KLw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="n8l-OF-cE6"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Text" image="ic_sms_failed" id="UpE-Xv-m6i"/>
@@ -160,15 +169,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QF1-ZT-Aeg">
-                                <rect key="frame" x="0.0" y="284" width="375" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QF1-ZT-Aeg">
+                                <rect key="frame" x="20" y="40" width="335" height="550"/>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="btStartCall"/>
-                                <state key="normal" title="Call"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="335" id="sDn-Th-6dM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                <state key="normal" title="Call">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QF1-ZT-Aeg" firstAttribute="top" secondItem="hw8-pC-UUV" secondAttribute="top" constant="20" id="3dT-dy-eib"/>
+                            <constraint firstItem="hw8-pC-UUV" firstAttribute="bottom" secondItem="QF1-ZT-Aeg" secondAttribute="bottom" constant="28" id="KZs-C9-Wfi"/>
+                            <constraint firstItem="hw8-pC-UUV" firstAttribute="trailing" secondItem="QF1-ZT-Aeg" secondAttribute="trailing" constant="20" id="V9M-kK-OFp"/>
+                            <constraint firstItem="QF1-ZT-Aeg" firstAttribute="leading" secondItem="hw8-pC-UUV" secondAttribute="leading" constant="20" id="lzY-LY-XAR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hw8-pC-UUV"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Call" image="ic_phone_in_talk" id="nNk-mK-tsg"/>
