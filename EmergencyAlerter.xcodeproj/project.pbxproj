@@ -103,6 +103,7 @@
 		D0F6467D1FB1DCC200D3242F = {
 			isa = PBXGroup;
 			children = (
+				D0F8B24A1FB31EA40005F472 /* Model */,
 				D0F646881FB1DCC200D3242F /* EmergencyAlerter */,
 				D0F6469C1FB1DCC200D3242F /* EmergencyAlerter WatchKit App */,
 				D0F646AB1FB1DCC200D3242F /* EmergencyAlerter WatchKit Extension */,
@@ -123,6 +124,7 @@
 		D0F646881FB1DCC200D3242F /* EmergencyAlerter */ = {
 			isa = PBXGroup;
 			children = (
+				D0F8B24C1FB31EFE0005F472 /* ViewController */,
 				D0F646891FB1DCC200D3242F /* AppDelegate.swift */,
 				D0F6468B1FB1DCC200D3242F /* ViewController.swift */,
 				D0F6468D1FB1DCC200D3242F /* Main.storyboard */,
@@ -136,6 +138,7 @@
 		D0F6469C1FB1DCC200D3242F /* EmergencyAlerter WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				D0F8B24D1FB31F160005F472 /* ViewController */,
 				D0F6469D1FB1DCC200D3242F /* Interface.storyboard */,
 				D0F646A01FB1DCC200D3242F /* Assets.xcassets */,
 				D0F646A21FB1DCC200D3242F /* Info.plist */,
@@ -152,6 +155,27 @@
 				D0F646B21FB1DCC200D3242F /* Info.plist */,
 			);
 			path = "EmergencyAlerter WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		D0F8B24A1FB31EA40005F472 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D0F8B24C1FB31EFE0005F472 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D0F8B24D1FB31F160005F472 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
