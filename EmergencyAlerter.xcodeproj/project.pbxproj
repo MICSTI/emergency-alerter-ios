@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D8073D90EC2962F8CD0E728 /* Pods_EmergencyAlerter_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E801691A5EA9F8DA1E16F21 /* Pods_EmergencyAlerter_WatchKit_App.framework */; };
+		BCAE6FCE4E815DC7B64A5B94 /* Pods_EmergencyAlerter_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6761FDA18B94FD418C92EB7B /* Pods_EmergencyAlerter_WatchKit_Extension.framework */; };
+		CC9E23CBE931EC5365274637 /* Pods_EmergencyAlerter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D623033709F287680B3B93DE /* Pods_EmergencyAlerter.framework */; };
+		D00A898B1FB329F500968701 /* PoliceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A898A1FB329F500968701 /* PoliceViewController.swift */; };
 		D0F6468A1FB1DCC200D3242F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F646891FB1DCC200D3242F /* AppDelegate.swift */; };
 		D0F6468C1FB1DCC200D3242F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6468B1FB1DCC200D3242F /* ViewController.swift */; };
 		D0F6468F1FB1DCC200D3242F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F6468D1FB1DCC200D3242F /* Main.storyboard */; };
@@ -19,6 +23,9 @@
 		D0F646AD1FB1DCC200D3242F /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F646AC1FB1DCC200D3242F /* InterfaceController.swift */; };
 		D0F646AF1FB1DCC200D3242F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F646AE1FB1DCC200D3242F /* ExtensionDelegate.swift */; };
 		D0F646B11FB1DCC200D3242F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0F646B01FB1DCC200D3242F /* Assets.xcassets */; };
+		D0F8B2521FB325740005F472 /* PoliceStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8B2511FB325740005F472 /* PoliceStation.swift */; };
+		D0F8B2541FB325E80005F472 /* GeoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8B2531FB325E80005F472 /* GeoLocation.swift */; };
+		D0F8B2561FB326200005F472 /* PoliceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F8B2551FB326200005F472 /* PoliceLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +71,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E801691A5EA9F8DA1E16F21 /* Pods_EmergencyAlerter_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmergencyAlerter_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F0450BD1046A011C1E6048D /* Pods-EmergencyAlerter WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyAlerter WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmergencyAlerter WatchKit App/Pods-EmergencyAlerter WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		58502FAC4EAD1FE4BA0B8D54 /* Pods-EmergencyAlerter WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyAlerter WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmergencyAlerter WatchKit Extension/Pods-EmergencyAlerter WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		5A85FB31B6385CC79BA37BDD /* Pods-EmergencyAlerter WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyAlerter WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmergencyAlerter WatchKit Extension/Pods-EmergencyAlerter WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		6761FDA18B94FD418C92EB7B /* Pods_EmergencyAlerter_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmergencyAlerter_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87E0807B6FC2FB68172A31CA /* Pods-EmergencyAlerter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyAlerter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmergencyAlerter/Pods-EmergencyAlerter.debug.xcconfig"; sourceTree = "<group>"; };
+		D00A898A1FB329F500968701 /* PoliceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceViewController.swift; sourceTree = "<group>"; };
 		D0F646861FB1DCC200D3242F /* EmergencyAlerter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmergencyAlerter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F646891FB1DCC200D3242F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0F6468B1FB1DCC200D3242F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,13 +94,29 @@
 		D0F646AE1FB1DCC200D3242F /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		D0F646B01FB1DCC200D3242F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0F646B21FB1DCC200D3242F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0F8B2501FB325740005F472 /* EmergencyAlerter WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EmergencyAlerter WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
+		D0F8B2511FB325740005F472 /* PoliceStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceStation.swift; sourceTree = "<group>"; };
+		D0F8B2531FB325E80005F472 /* GeoLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoLocation.swift; sourceTree = "<group>"; };
+		D0F8B2551FB326200005F472 /* PoliceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceLoader.swift; sourceTree = "<group>"; };
+		D623033709F287680B3B93DE /* Pods_EmergencyAlerter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmergencyAlerter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E125E2632963BDF869878247 /* Pods-EmergencyAlerter WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyAlerter WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmergencyAlerter WatchKit App/Pods-EmergencyAlerter WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		F6B94CE3D9D26A39DB7D2EAF /* Pods-EmergencyAlerter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyAlerter.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmergencyAlerter/Pods-EmergencyAlerter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3371D41493C2ACF3BE0F52E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D8073D90EC2962F8CD0E728 /* Pods_EmergencyAlerter_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0F646831FB1DCC200D3242F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC9E23CBE931EC5365274637 /* Pods_EmergencyAlerter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,20 +124,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCAE6FCE4E815DC7B64A5B94 /* Pods_EmergencyAlerter_WatchKit_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05EEE4E1D9B531FE05B45BA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D623033709F287680B3B93DE /* Pods_EmergencyAlerter.framework */,
+				3E801691A5EA9F8DA1E16F21 /* Pods_EmergencyAlerter_WatchKit_App.framework */,
+				6761FDA18B94FD418C92EB7B /* Pods_EmergencyAlerter_WatchKit_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4A864E5783072F56C883009 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87E0807B6FC2FB68172A31CA /* Pods-EmergencyAlerter.debug.xcconfig */,
+				F6B94CE3D9D26A39DB7D2EAF /* Pods-EmergencyAlerter.release.xcconfig */,
+				4F0450BD1046A011C1E6048D /* Pods-EmergencyAlerter WatchKit App.debug.xcconfig */,
+				E125E2632963BDF869878247 /* Pods-EmergencyAlerter WatchKit App.release.xcconfig */,
+				58502FAC4EAD1FE4BA0B8D54 /* Pods-EmergencyAlerter WatchKit Extension.debug.xcconfig */,
+				5A85FB31B6385CC79BA37BDD /* Pods-EmergencyAlerter WatchKit Extension.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D0F6467D1FB1DCC200D3242F = {
 			isa = PBXGroup;
 			children = (
+				D0F8B24F1FB321320005F472 /* Network */,
 				D0F8B24A1FB31EA40005F472 /* Model */,
 				D0F646881FB1DCC200D3242F /* EmergencyAlerter */,
 				D0F6469C1FB1DCC200D3242F /* EmergencyAlerter WatchKit App */,
 				D0F646AB1FB1DCC200D3242F /* EmergencyAlerter WatchKit Extension */,
 				D0F646871FB1DCC200D3242F /* Products */,
+				B4A864E5783072F56C883009 /* Pods */,
+				05EEE4E1D9B531FE05B45BA8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +217,9 @@
 		D0F8B24A1FB31EA40005F472 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D0F8B2511FB325740005F472 /* PoliceStation.swift */,
+				D0F8B2501FB325740005F472 /* EmergencyAlerter WatchKit App-Bridging-Header.h */,
+				D0F8B2531FB325E80005F472 /* GeoLocation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,6 +227,7 @@
 		D0F8B24C1FB31EFE0005F472 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D00A898A1FB329F500968701 /* PoliceViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -178,6 +239,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		D0F8B24F1FB321320005F472 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D0F8B2551FB326200005F472 /* PoliceLoader.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,10 +254,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0F646BD1FB1DCC200D3242F /* Build configuration list for PBXNativeTarget "EmergencyAlerter" */;
 			buildPhases = (
+				091AC4BBA14A682438B3F841 /* [CP] Check Pods Manifest.lock */,
 				D0F646821FB1DCC200D3242F /* Sources */,
 				D0F646831FB1DCC200D3242F /* Frameworks */,
 				D0F646841FB1DCC200D3242F /* Resources */,
 				D0F646BC1FB1DCC200D3242F /* Embed Watch Content */,
+				089B0C2CBA902C322B3B2B9E /* [CP] Embed Pods Frameworks */,
+				8781C5A785E09BD7AAEA9812 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,8 +276,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0F646B91FB1DCC200D3242F /* Build configuration list for PBXNativeTarget "EmergencyAlerter WatchKit App" */;
 			buildPhases = (
+				5315873B70D9C5E09CDC06FD /* [CP] Check Pods Manifest.lock */,
 				D0F646961FB1DCC200D3242F /* Resources */,
 				D0F646B81FB1DCC200D3242F /* Embed App Extensions */,
+				3371D41493C2ACF3BE0F52E8 /* Frameworks */,
+				3BCC0B0DA248AD755AD49718 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -221,9 +296,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0F646B51FB1DCC200D3242F /* Build configuration list for PBXNativeTarget "EmergencyAlerter WatchKit Extension" */;
 			buildPhases = (
+				262B2D66F62BDF351EAF29C5 /* [CP] Check Pods Manifest.lock */,
 				D0F646A31FB1DCC200D3242F /* Sources */,
 				D0F646A41FB1DCC200D3242F /* Frameworks */,
 				D0F646A51FB1DCC200D3242F /* Resources */,
+				9A8FF2507DECD60015738E0F /* [CP] Embed Pods Frameworks */,
+				39151F1949151886065B19A5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +328,7 @@
 					};
 					D0F646971FB1DCC200D3242F = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					D0F646A61FB1DCC200D3242F = {
@@ -308,11 +387,152 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		089B0C2CBA902C322B3B2B9E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EmergencyAlerter/Pods-EmergencyAlerter-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON-iOS/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmergencyAlerter/Pods-EmergencyAlerter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		091AC4BBA14A682438B3F841 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EmergencyAlerter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		262B2D66F62BDF351EAF29C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EmergencyAlerter WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39151F1949151886065B19A5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmergencyAlerter WatchKit Extension/Pods-EmergencyAlerter WatchKit Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3BCC0B0DA248AD755AD49718 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmergencyAlerter WatchKit App/Pods-EmergencyAlerter WatchKit App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5315873B70D9C5E09CDC06FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EmergencyAlerter WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8781C5A785E09BD7AAEA9812 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmergencyAlerter/Pods-EmergencyAlerter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A8FF2507DECD60015738E0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmergencyAlerter WatchKit Extension/Pods-EmergencyAlerter WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D0F646821FB1DCC200D3242F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F8B2541FB325E80005F472 /* GeoLocation.swift in Sources */,
+				D0F8B2521FB325740005F472 /* PoliceStation.swift in Sources */,
+				D00A898B1FB329F500968701 /* PoliceViewController.swift in Sources */,
+				D0F8B2561FB326200005F472 /* PoliceLoader.swift in Sources */,
 				D0F6468C1FB1DCC200D3242F /* ViewController.swift in Sources */,
 				D0F6468A1FB1DCC200D3242F /* AppDelegate.swift in Sources */,
 			);
@@ -479,6 +699,7 @@
 		};
 		D0F646B61FB1DCC200D3242F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58502FAC4EAD1FE4BA0B8D54 /* Pods-EmergencyAlerter WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -496,6 +717,7 @@
 		};
 		D0F646B71FB1DCC200D3242F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A85FB31B6385CC79BA37BDD /* Pods-EmergencyAlerter WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -513,16 +735,21 @@
 		};
 		D0F646BA1FB1DCC200D3242F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F0450BD1046A011C1E6048D /* Pods-EmergencyAlerter WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				IBSC_MODULE = EmergencyAlerter_WatchKit_Extension;
 				INFOPLIST_FILE = "EmergencyAlerter WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.fhj.ims.t11.EmergencyAlerter.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Model/EmergencyAlerter WatchKit App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
@@ -531,16 +758,20 @@
 		};
 		D0F646BB1FB1DCC200D3242F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E125E2632963BDF869878247 /* Pods-EmergencyAlerter WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				IBSC_MODULE = EmergencyAlerter_WatchKit_Extension;
 				INFOPLIST_FILE = "EmergencyAlerter WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.fhj.ims.t11.EmergencyAlerter.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Model/EmergencyAlerter WatchKit App-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
@@ -549,6 +780,7 @@
 		};
 		D0F646BE1FB1DCC200D3242F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87E0807B6FC2FB68172A31CA /* Pods-EmergencyAlerter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -563,6 +795,7 @@
 		};
 		D0F646BF1FB1DCC200D3242F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6B94CE3D9D26A39DB7D2EAF /* Pods-EmergencyAlerter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
