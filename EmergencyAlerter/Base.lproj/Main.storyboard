@@ -100,6 +100,14 @@
                                     <action selector="buttonTapped:" destination="Mlo-30-5HL" eventType="touchUpInside" id="PwV-3d-fss"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BJ-SR-Boj">
+                                <rect key="frame" x="164" y="299" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Get Contacts"/>
+                                <connections>
+                                    <action selector="getbuttonTapped:" destination="Mlo-30-5HL" eventType="touchUpInside" id="p26-dt-38y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="aNo-wO-baF"/>
@@ -107,6 +115,7 @@
                     <navigationItem key="navigationItem" title="Options" id="DnH-V2-D5c"/>
                     <connections>
                         <outlet property="addContact" destination="rLZ-El-gOk" id="cVw-t7-Fu1"/>
+                        <outlet property="getContacts" destination="6BJ-SR-Boj" id="k8G-4g-gZx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yg9-OC-2nx" userLabel="First Responder" sceneMemberID="firstResponder"/>

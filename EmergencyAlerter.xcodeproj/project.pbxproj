@@ -13,9 +13,7 @@
 		D00A898B1FB329F500968701 /* PoliceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A898A1FB329F500968701 /* PoliceViewController.swift */; };
 		D0CEE1A71FB4504300E061E3 /* SettingsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CEE1A61FB4504300E061E3 /* SettingsInterfaceController.swift */; };
 		D0CEE1D11FB453CB00E061E3 /* EmergencyAlerter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0CEE1CF1FB453CB00E061E3 /* EmergencyAlerter.xcdatamodeld */; };
-		D0CEE1D21FB453CB00E061E3 /* EmergencyAlerter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0CEE1CF1FB453CB00E061E3 /* EmergencyAlerter.xcdatamodeld */; };
 		D0CEE1D41FB4546B00E061E3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CEE1D31FB4546B00E061E3 /* SettingsViewController.swift */; };
-		D0CEE1D51FB4546B00E061E3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CEE1D31FB4546B00E061E3 /* SettingsViewController.swift */; };
 		D0F6468A1FB1DCC200D3242F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F646891FB1DCC200D3242F /* AppDelegate.swift */; };
 		D0F6468C1FB1DCC200D3242F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6468B1FB1DCC200D3242F /* ViewController.swift */; };
 		D0F6468F1FB1DCC200D3242F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F6468D1FB1DCC200D3242F /* Main.storyboard */; };
@@ -558,8 +556,6 @@
 				D0F646AF1FB1DCC200D3242F /* ExtensionDelegate.swift in Sources */,
 				D0CEE1A71FB4504300E061E3 /* SettingsInterfaceController.swift in Sources */,
 				D0F646AD1FB1DCC200D3242F /* InterfaceController.swift in Sources */,
-				D0CEE1D51FB4546B00E061E3 /* SettingsViewController.swift in Sources */,
-				D0CEE1D21FB453CB00E061E3 /* EmergencyAlerter.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
