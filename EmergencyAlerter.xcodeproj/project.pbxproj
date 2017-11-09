@@ -11,6 +11,11 @@
 		BCAE6FCE4E815DC7B64A5B94 /* Pods_EmergencyAlerter_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6761FDA18B94FD418C92EB7B /* Pods_EmergencyAlerter_WatchKit_Extension.framework */; };
 		CC9E23CBE931EC5365274637 /* Pods_EmergencyAlerter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D623033709F287680B3B93DE /* Pods_EmergencyAlerter.framework */; };
 		D00A898B1FB329F500968701 /* PoliceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A898A1FB329F500968701 /* PoliceViewController.swift */; };
+		D0CEE1A71FB4504300E061E3 /* SettingsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CEE1A61FB4504300E061E3 /* SettingsInterfaceController.swift */; };
+		D0CEE1D11FB453CB00E061E3 /* EmergencyAlerter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0CEE1CF1FB453CB00E061E3 /* EmergencyAlerter.xcdatamodeld */; };
+		D0CEE1D21FB453CB00E061E3 /* EmergencyAlerter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0CEE1CF1FB453CB00E061E3 /* EmergencyAlerter.xcdatamodeld */; };
+		D0CEE1D41FB4546B00E061E3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CEE1D31FB4546B00E061E3 /* SettingsViewController.swift */; };
+		D0CEE1D51FB4546B00E061E3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CEE1D31FB4546B00E061E3 /* SettingsViewController.swift */; };
 		D0F6468A1FB1DCC200D3242F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F646891FB1DCC200D3242F /* AppDelegate.swift */; };
 		D0F6468C1FB1DCC200D3242F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6468B1FB1DCC200D3242F /* ViewController.swift */; };
 		D0F6468F1FB1DCC200D3242F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F6468D1FB1DCC200D3242F /* Main.storyboard */; };
@@ -78,6 +83,9 @@
 		6761FDA18B94FD418C92EB7B /* Pods_EmergencyAlerter_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmergencyAlerter_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E0807B6FC2FB68172A31CA /* Pods-EmergencyAlerter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyAlerter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmergencyAlerter/Pods-EmergencyAlerter.debug.xcconfig"; sourceTree = "<group>"; };
 		D00A898A1FB329F500968701 /* PoliceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceViewController.swift; sourceTree = "<group>"; };
+		D0CEE1A61FB4504300E061E3 /* SettingsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInterfaceController.swift; sourceTree = "<group>"; };
+		D0CEE1D01FB453CB00E061E3 /* EmergencyAlerter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmergencyAlerter.xcdatamodel; sourceTree = "<group>"; };
+		D0CEE1D31FB4546B00E061E3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D0F646861FB1DCC200D3242F /* EmergencyAlerter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmergencyAlerter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F646891FB1DCC200D3242F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0F6468B1FB1DCC200D3242F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +165,7 @@
 		D0F6467D1FB1DCC200D3242F = {
 			isa = PBXGroup;
 			children = (
+				D0CEE1CF1FB453CB00E061E3 /* EmergencyAlerter.xcdatamodeld */,
 				D0F8B24F1FB321320005F472 /* Network */,
 				D0F8B24A1FB31EA40005F472 /* Model */,
 				D0F646881FB1DCC200D3242F /* EmergencyAlerter */,
@@ -228,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				D00A898A1FB329F500968701 /* PoliceViewController.swift */,
+				D0CEE1D31FB4546B00E061E3 /* SettingsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -235,6 +245,7 @@
 		D0F8B24D1FB31F160005F472 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D0CEE1A61FB4504300E061E3 /* SettingsInterfaceController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -535,6 +546,8 @@
 				D0F8B2561FB326200005F472 /* PoliceLoader.swift in Sources */,
 				D0F6468C1FB1DCC200D3242F /* ViewController.swift in Sources */,
 				D0F6468A1FB1DCC200D3242F /* AppDelegate.swift in Sources */,
+				D0CEE1D11FB453CB00E061E3 /* EmergencyAlerter.xcdatamodeld in Sources */,
+				D0CEE1D41FB4546B00E061E3 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,7 +556,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0F646AF1FB1DCC200D3242F /* ExtensionDelegate.swift in Sources */,
+				D0CEE1A71FB4504300E061E3 /* SettingsInterfaceController.swift in Sources */,
 				D0F646AD1FB1DCC200D3242F /* InterfaceController.swift in Sources */,
+				D0CEE1D51FB4546B00E061E3 /* SettingsViewController.swift in Sources */,
+				D0CEE1D21FB453CB00E061E3 /* EmergencyAlerter.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -848,6 +864,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D0CEE1CF1FB453CB00E061E3 /* EmergencyAlerter.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D0CEE1D01FB453CB00E061E3 /* EmergencyAlerter.xcdatamodel */,
+			);
+			currentVersion = D0CEE1D01FB453CB00E061E3 /* EmergencyAlerter.xcdatamodel */;
+			path = EmergencyAlerter.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D0F6467E1FB1DCC200D3242F /* Project object */;
 }

@@ -62,12 +62,23 @@
             </objects>
             <point key="canvasLocation" x="498" y="211"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Settings Interface Controller-->
         <scene sceneID="8vf-cb-x35">
             <objects>
-                <controller id="VmL-2k-euH"/>
+                <controller id="VmL-2k-euH" customClass="SettingsInterfaceController" customModule="EmergencyAlerter_WatchKit_Extension">
+                    <items>
+                        <switch width="1" alignment="left" accessibilityIdentifier="swHeartrate" value="YES" title="Heartrate Alert" id="9dN-4Y-1AJ">
+                            <connections>
+                                <action selector="toggleHeartrateSwitch:" destination="VmL-2k-euH" id="hEk-NF-L1b"/>
+                            </connections>
+                        </switch>
+                    </items>
+                    <connections>
+                        <outlet property="heartrateSwitch" destination="9dN-4Y-1AJ" id="9GJ-QO-29i"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="129" y="447"/>
+            <point key="canvasLocation" x="262" y="472"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="yDE-k0-bwZ">

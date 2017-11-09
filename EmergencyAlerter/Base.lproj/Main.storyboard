@@ -70,7 +70,7 @@
         <!--Options-->
         <scene sceneID="5b0-kT-Q5E">
             <objects>
-                <viewController id="Mlo-30-5HL" sceneMemberID="viewController">
+                <viewController id="Mlo-30-5HL" customClass="SettingsViewController" customModule="EmergencyAlerter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="urJ-1C-fU1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,15 +91,27 @@
                                     <navigationItem title="Options" id="ZIk-Er-gud"/>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLZ-El-gOk">
+                                <rect key="frame" x="97" y="175" width="168" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="addContact"/>
+                                <state key="normal" title="Add Contact"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Mlo-30-5HL" eventType="touchUpInside" id="PwV-3d-fss"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="aNo-wO-baF"/>
                     </view>
                     <navigationItem key="navigationItem" title="Options" id="DnH-V2-D5c"/>
+                    <connections>
+                        <outlet property="addContact" destination="rLZ-El-gOk" id="cVw-t7-Fu1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yg9-OC-2nx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="462" y="1619"/>
+            <point key="canvasLocation" x="461.60000000000002" y="1618.7406296851575"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VHW-uJ-qBN">
