@@ -62,7 +62,7 @@ class SettingsViewController: UIViewController {
     
     @IBAction func getbuttonTapped(_ sender: UIButton) {
         print(" getButton tapped")
-     /*   guard let appDelegate =
+       guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
                 return
         }
@@ -71,14 +71,27 @@ class SettingsViewController: UIViewController {
         let managedContext =
             appDelegate.persistentContainer.viewContext
         
-        let peopleFetch: NSFetchRequest<EmergencyContact> = EmergencyContact.fetchRequest()
+        // Initialize Fetch Request
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
+        
+        // Create Entity Description
+        let entityDescription = NSEntityDescription.entity(forEntityName: "EmergencyContact", in: managedContext)
+        
+        // Configure Fetch Request
+        fetchRequest.entity = entityDescription
         
         do {
-            let fetchedPeople = try managedContext.executeFetchRequest(peopleFetch) as! NSFetchRequest<EmergencyContact>
+            let result = try managedContext.fetch(fetchRequest) as! [EmergencyContact]
+            for contact in result {
+                print(contact.name)
+            }
+            
         } catch {
-            fatalError("Failed to fetch employees: \(error)")
+            let fetchError = error as NSError
+            print(fetchError)
         }
-*/
+
+        
     }
 }
 
