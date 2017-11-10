@@ -26,6 +26,7 @@ public class PoliceLoader {
         
         Alamofire.request(apiUrl).responseArray { (response: DataResponse<[PoliceStation]>) in
             let policeArray = response.result.value
+            
             if let policeArray = policeArray {
                 completion(policeArray,nil)
             }else {

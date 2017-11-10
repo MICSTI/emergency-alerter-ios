@@ -138,7 +138,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="This is the Emergency Alerter App!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTo-HT-8iR">
-                                <rect key="frame" x="16" y="106" width="266" height="21"/>
+                                <rect key="frame" x="16" y="106" width="265.5" height="21"/>
                                 <accessibility key="accessibilityConfiguration" identifier="lbAbout"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -180,7 +180,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WHh-qa-2sR" firstAttribute="top" secondItem="FTo-HT-8iR" secondAttribute="bottom" constant="25" id="6JL-e3-jng"/>
+                            <constraint firstItem="FTo-HT-8iR" firstAttribute="leading" secondItem="gLN-iK-9Cx" secondAttribute="leading" constant="16" id="mVB-gG-W3j"/>
                             <constraint firstItem="FTo-HT-8iR" firstAttribute="top" secondItem="l2p-X5-F19" secondAttribute="bottom" constant="42" id="sDZ-go-c89"/>
+                            <constraint firstItem="gLN-iK-9Cx" firstAttribute="trailing" secondItem="FTo-HT-8iR" secondAttribute="trailing" constant="93.5" id="tAD-XX-82J"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gLN-iK-9Cx"/>
                     </view>
@@ -201,9 +203,6 @@
                                 <rect key="frame" x="20" y="40" width="335" height="550"/>
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="btStartCall"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="335" id="sDn-Th-6dM"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
                                 <state key="normal" title="Call">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

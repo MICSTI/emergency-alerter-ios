@@ -84,8 +84,6 @@ class PoliceViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         
         //save last location, compare, if greater than threshold reload police
         let distanceFromOriginal = originalLocation.distance(from: currentLocation)
-        print(" distance \(distanceFromOriginal)")
-
         if(distanceFromOriginal > 200){
             map.setCenter(CLLocationCoordinate2D(latitude: lat, longitude: lon), animated: false)
             originalLocation = currentLocation
