@@ -62,7 +62,7 @@ class SettingsViewController: UIViewController {
     
     @IBAction func getbuttonTapped(_ sender: UIButton) {
         print(" getButton tapped")
-        guard let appDelegate =
+     /*   guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
                 return
         }
@@ -78,7 +78,7 @@ class SettingsViewController: UIViewController {
         } catch {
             fatalError("Failed to fetch employees: \(error)")
         }
-
+*/
     }
 }
 

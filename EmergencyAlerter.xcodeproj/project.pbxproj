@@ -11,6 +11,7 @@
 		BCAE6FCE4E815DC7B64A5B94 /* Pods_EmergencyAlerter_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6761FDA18B94FD418C92EB7B /* Pods_EmergencyAlerter_WatchKit_Extension.framework */; };
 		CC9E23CBE931EC5365274637 /* Pods_EmergencyAlerter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D623033709F287680B3B93DE /* Pods_EmergencyAlerter.framework */; };
 		D00A898B1FB329F500968701 /* PoliceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A898A1FB329F500968701 /* PoliceViewController.swift */; };
+		D07AEF071FB59EC400C979AE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07AEF061FB59EC300C979AE /* CoreLocation.framework */; };
 		D0CEE1A71FB4504300E061E3 /* SettingsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CEE1A61FB4504300E061E3 /* SettingsInterfaceController.swift */; };
 		D0CEE1D11FB453CB00E061E3 /* EmergencyAlerter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0CEE1CF1FB453CB00E061E3 /* EmergencyAlerter.xcdatamodeld */; };
 		D0CEE1D41FB4546B00E061E3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CEE1D31FB4546B00E061E3 /* SettingsViewController.swift */; };
@@ -81,6 +82,8 @@
 		6761FDA18B94FD418C92EB7B /* Pods_EmergencyAlerter_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmergencyAlerter_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E0807B6FC2FB68172A31CA /* Pods-EmergencyAlerter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyAlerter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmergencyAlerter/Pods-EmergencyAlerter.debug.xcconfig"; sourceTree = "<group>"; };
 		D00A898A1FB329F500968701 /* PoliceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceViewController.swift; sourceTree = "<group>"; };
+		D07AEF061FB59EC300C979AE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D0CE6A591FB5AC5E002541F6 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0CEE1A61FB4504300E061E3 /* SettingsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInterfaceController.swift; sourceTree = "<group>"; };
 		D0CEE1D01FB453CB00E061E3 /* EmergencyAlerter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmergencyAlerter.xcdatamodel; sourceTree = "<group>"; };
 		D0CEE1D31FB4546B00E061E3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D07AEF071FB59EC400C979AE /* CoreLocation.framework in Frameworks */,
 				CC9E23CBE931EC5365274637 /* Pods_EmergencyAlerter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +144,8 @@
 		05EEE4E1D9B531FE05B45BA8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0CE6A591FB5AC5E002541F6 /* ObjectMapper.framework */,
+				D07AEF061FB59EC300C979AE /* CoreLocation.framework */,
 				D623033709F287680B3B93DE /* Pods_EmergencyAlerter.framework */,
 				3E801691A5EA9F8DA1E16F21 /* Pods_EmergencyAlerter_WatchKit_App.framework */,
 				6761FDA18B94FD418C92EB7B /* Pods_EmergencyAlerter_WatchKit_Extension.framework */,
@@ -405,12 +411,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-EmergencyAlerter/Pods-EmergencyAlerter-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON-iOS/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper-iOS/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper-iOS/ObjectMapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -8,7 +8,7 @@
 
 import Foundation
 import Alamofire
-import SwiftyJSON
+import AlamofireObjectMapper
 
 typealias PoliceStationDownloadCompleteHandler = (_ policeStations: [PoliceStation]?, _ error: Error?) -> Void
 
@@ -22,22 +22,34 @@ public class PoliceLoader {
     }
     
     func loadFromInternet<T: LocationAware>(current: T, completion: @escaping PoliceStationDownloadCompleteHandler) {
-        
+        print("do somethign")
         apiUrl.append("?lat=\(current.latitude)&lng=\(current.longitude)&radius=10000")
         
-        Alamofire.request(apiUrl).validate().responseJSON { response in
+        Alamofire.request(apiUrl).responseArray { (response: DataResponse<[PoliceStation]>) in
+            print(response)
+            let policeArray = response.result.value
+            
+            if let policeArray = policeArray {
+                for policeStation in policeArray {
+                    print(policeStation)
+                    completion([],nil)
+                }
+            }
+        }
+        
+        /*Alamofire.request(apiUrl).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
-                let json = JSON(value)
-                print("JSON: \(json)")
-                //map json.data
+              
+               
                 
+            
                 completion([],nil)
             case .failure(let error):
                 print(error)
                 completion(nil,error)
             }
-        }
+        }*/
         
     }
     

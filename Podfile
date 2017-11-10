@@ -8,7 +8,7 @@ target 'EmergencyAlerter' do
 
   # Pods for EmergencyAlerter
   pod ‘Alamofire’, ‘4.5.1’
-  pod ’SwiftyJSON’, ‘4.0.0’ 
+  pod ‘AlamofireObjectMapper’, ‘5.0.0’
 
 end
 
@@ -18,7 +18,8 @@ target 'EmergencyAlerter WatchKit App' do
 
   # Pods for EmergencyAlerter WatchKit App
   pod ‘Alamofire’, ‘4.5.1’
-  pod ‘SwiftyJSON’, ‘4.0.0’
+  pod ‘AlamofireObjectMapper’, ‘5.0.0’
+
 end
 
 target 'EmergencyAlerter WatchKit Extension' do

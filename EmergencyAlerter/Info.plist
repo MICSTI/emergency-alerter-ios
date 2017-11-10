@@ -34,6 +34,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>The App needs your location to show it on the map and send it to the selected contacts in case of emergency.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string> Always The App needs your location to show it on the map and send it to the selected contacts in case of emergency.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
