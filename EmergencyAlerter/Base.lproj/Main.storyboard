@@ -12,7 +12,7 @@
         <!--Text-->
         <scene sceneID="R5O-YE-NEO">
             <objects>
-                <viewController id="qmC-ph-8T4" sceneMemberID="viewController">
+                <viewController id="qmC-ph-8T4" customClass="MessageViewController" customModule="EmergencyAlerter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O7K-pu-Mc5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,6 +37,9 @@
                         <viewLayoutGuide key="safeArea" id="n8l-OF-cE6"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Text" image="ic_sms_failed" id="UpE-Xv-m6i"/>
+                    <connections>
+                        <outlet property="MessageButton" destination="n0P-t3-e2O" id="fPJ-NI-f3V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XE8-Wg-JYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

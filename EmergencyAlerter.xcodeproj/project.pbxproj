@@ -11,6 +11,7 @@
 		BCAE6FCE4E815DC7B64A5B94 /* Pods_EmergencyAlerter_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6761FDA18B94FD418C92EB7B /* Pods_EmergencyAlerter_WatchKit_Extension.framework */; };
 		CC9E23CBE931EC5365274637 /* Pods_EmergencyAlerter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D623033709F287680B3B93DE /* Pods_EmergencyAlerter.framework */; };
 		D00A898B1FB329F500968701 /* PoliceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A898A1FB329F500968701 /* PoliceViewController.swift */; };
+		D040A8601FBF58B600731C24 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040A85F1FBF58B600731C24 /* MessageViewController.swift */; };
 		D07AEF071FB59EC400C979AE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07AEF061FB59EC300C979AE /* CoreLocation.framework */; };
 		D0CEE1A71FB4504300E061E3 /* SettingsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CEE1A61FB4504300E061E3 /* SettingsInterfaceController.swift */; };
 		D0CEE1D11FB453CB00E061E3 /* EmergencyAlerter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0CEE1CF1FB453CB00E061E3 /* EmergencyAlerter.xcdatamodeld */; };
@@ -83,6 +84,7 @@
 		6761FDA18B94FD418C92EB7B /* Pods_EmergencyAlerter_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmergencyAlerter_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E0807B6FC2FB68172A31CA /* Pods-EmergencyAlerter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyAlerter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmergencyAlerter/Pods-EmergencyAlerter.debug.xcconfig"; sourceTree = "<group>"; };
 		D00A898A1FB329F500968701 /* PoliceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceViewController.swift; sourceTree = "<group>"; };
+		D040A85F1FBF58B600731C24 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		D07AEF061FB59EC300C979AE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D0CE6A591FB5AC5E002541F6 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0CEE1A61FB4504300E061E3 /* SettingsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInterfaceController.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				D00A898A1FB329F500968701 /* PoliceViewController.swift */,
 				D0CEE1D31FB4546B00E061E3 /* SettingsViewController.swift */,
 				D0DB73301FBF4EFB00187EF3 /* CallViewController.swift */,
+				D040A85F1FBF58B600731C24 /* MessageViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				D0F8B2521FB325740005F472 /* PoliceStation.swift in Sources */,
 				D00A898B1FB329F500968701 /* PoliceViewController.swift in Sources */,
 				D0DB73311FBF4EFB00187EF3 /* CallViewController.swift in Sources */,
+				D040A8601FBF58B600731C24 /* MessageViewController.swift in Sources */,
 				D0F8B2561FB326200005F472 /* PoliceLoader.swift in Sources */,
 				D0F6468C1FB1DCC200D3242F /* ViewController.swift in Sources */,
 				D0F6468A1FB1DCC200D3242F /* AppDelegate.swift in Sources */,

@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreData
+import ContactsUI
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, CNContactPickerDelegate {
     
     
     @IBOutlet weak var addContact: UIButton!
@@ -19,7 +20,7 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+   
      
     }
     
@@ -30,6 +31,29 @@ class SettingsViewController: UIViewController {
     
     @IBAction func buttonTapped(_ sender: UIButton) {
         print("Button tapped")
+       
+        
+        let contactPicker = CNContactPickerViewController()
+        contactPicker.delegate = self
+        contactPicker.displayedPropertyKeys = [CNContactGivenNameKey, CNContactPhoneNumbersKey]
+        self.present(contactPicker, animated: true, completion: nil)
+        
+        
+        
+    }
+    
+    
+    func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
+        // You can fetch selected name and number in the following way
+        
+        // user name
+        let userName:String = contact.givenName + " " + contact.familyName
+        // user phone number
+        let userPhoneNumbers:[CNLabeledValue<CNPhoneNumber>] = contact.phoneNumbers
+        let firstPhoneNumber:CNPhoneNumber = userPhoneNumbers[0].value
+        // user phone number string
+        let primaryPhoneNumberStr:String = firstPhoneNumber.stringValue
+        
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
                 return
@@ -48,8 +72,8 @@ class SettingsViewController: UIViewController {
                                      insertInto: managedContext)
         
         // 3
-        person.setValue("Test", forKeyPath: "name")
-        person.setValue("1234", forKey: "telephoneNumber")
+        person.setValue(userName, forKeyPath: "name")
+        person.setValue(firstPhoneNumber.stringValue, forKey: "telephoneNumber")
         
         // 4
         do {
@@ -58,6 +82,11 @@ class SettingsViewController: UIViewController {
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
+        
+    }
+    
+    func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
+        
     }
     
     @IBAction func getbuttonTapped(_ sender: UIButton) {
