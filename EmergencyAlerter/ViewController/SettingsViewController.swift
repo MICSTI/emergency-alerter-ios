@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import ContactsUI
 
-class SettingsViewController: UIViewController, CNContactPickerDelegate {
+class SettingsViewController: UITableViewController, CNContactPickerDelegate {
     
     
     @IBOutlet weak var addContact: UIButton!
