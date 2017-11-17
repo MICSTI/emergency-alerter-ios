@@ -15,6 +15,7 @@
 		D0CEE1A71FB4504300E061E3 /* SettingsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CEE1A61FB4504300E061E3 /* SettingsInterfaceController.swift */; };
 		D0CEE1D11FB453CB00E061E3 /* EmergencyAlerter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0CEE1CF1FB453CB00E061E3 /* EmergencyAlerter.xcdatamodeld */; };
 		D0CEE1D41FB4546B00E061E3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CEE1D31FB4546B00E061E3 /* SettingsViewController.swift */; };
+		D0DB73311FBF4EFB00187EF3 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB73301FBF4EFB00187EF3 /* CallViewController.swift */; };
 		D0F6468A1FB1DCC200D3242F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F646891FB1DCC200D3242F /* AppDelegate.swift */; };
 		D0F6468C1FB1DCC200D3242F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6468B1FB1DCC200D3242F /* ViewController.swift */; };
 		D0F6468F1FB1DCC200D3242F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F6468D1FB1DCC200D3242F /* Main.storyboard */; };
@@ -87,6 +88,7 @@
 		D0CEE1A61FB4504300E061E3 /* SettingsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInterfaceController.swift; sourceTree = "<group>"; };
 		D0CEE1D01FB453CB00E061E3 /* EmergencyAlerter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmergencyAlerter.xcdatamodel; sourceTree = "<group>"; };
 		D0CEE1D31FB4546B00E061E3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D0DB73301FBF4EFB00187EF3 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		D0F646861FB1DCC200D3242F /* EmergencyAlerter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmergencyAlerter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F646891FB1DCC200D3242F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0F6468B1FB1DCC200D3242F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			children = (
 				D00A898A1FB329F500968701 /* PoliceViewController.swift */,
 				D0CEE1D31FB4546B00E061E3 /* SettingsViewController.swift */,
+				D0DB73301FBF4EFB00187EF3 /* CallViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				D0F8B2541FB325E80005F472 /* GeoLocation.swift in Sources */,
 				D0F8B2521FB325740005F472 /* PoliceStation.swift in Sources */,
 				D00A898B1FB329F500968701 /* PoliceViewController.swift in Sources */,
+				D0DB73311FBF4EFB00187EF3 /* CallViewController.swift in Sources */,
 				D0F8B2561FB326200005F472 /* PoliceLoader.swift in Sources */,
 				D0F6468C1FB1DCC200D3242F /* ViewController.swift in Sources */,
 				D0F6468A1FB1DCC200D3242F /* AppDelegate.swift in Sources */,

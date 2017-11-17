@@ -83,7 +83,7 @@ class SettingsViewController: UIViewController {
         do {
             let result = try managedContext.fetch(fetchRequest) as! [EmergencyContact]
             for contact in result {
-                print(contact.name)
+                print(contact.name!)
             }
             
         } catch {

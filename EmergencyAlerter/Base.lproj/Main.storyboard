@@ -194,14 +194,14 @@
         <!--Call-->
         <scene sceneID="vN1-qm-ywl">
             <objects>
-                <viewController id="mz4-pE-O1d" sceneMemberID="viewController">
+                <viewController id="mz4-pE-O1d" customClass="CallViewController" customModule="EmergencyAlerter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U2r-yZ-kSd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QF1-ZT-Aeg">
                                 <rect key="frame" x="20" y="40" width="335" height="550"/>
-                                <color key="backgroundColor" red="0.96470588235294119" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.75294117647058822" green="0.22352941176470587" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="btStartCall"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
                                 <state key="normal" title="Call">
@@ -219,10 +219,13 @@
                         <viewLayoutGuide key="safeArea" id="hw8-pC-UUV"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Call" image="ic_phone_in_talk" id="nNk-mK-tsg"/>
+                    <connections>
+                        <outlet property="CallButton" destination="QF1-ZT-Aeg" id="z8v-Th-Ers"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAg-vK-i7U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-244" y="-399"/>
+            <point key="canvasLocation" x="-244" y="-399.85007496251876"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="r1U-p6-FSO">
