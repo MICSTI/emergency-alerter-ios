@@ -182,7 +182,6 @@ class SettingsViewController: UITableViewController, CNContactPickerDelegate {
             if let result = try? managedContext.fetch(fetchRequest) {
                 for object in result {
                     let person = object as! NSManagedObject
-                    print("name: \(person.value(forKey: "name"))")
                     
                     managedContext.delete(object as! NSManagedObject)
                     do {

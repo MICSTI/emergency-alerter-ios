@@ -9,6 +9,7 @@
 
 import UIKit
 import AudioToolbox
+import CoreMotion
 
 class CallViewController: UIViewController {
     
@@ -67,5 +68,15 @@ class CallViewController: UIViewController {
             timer?.invalidate()
             }
     }
+    
+    // shake it, biatches!
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        print("motion ended: \(motion)")
+        if motion == .motionShake {
+            // vibrate once on shake
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+        }
+    }
+
 }
 
