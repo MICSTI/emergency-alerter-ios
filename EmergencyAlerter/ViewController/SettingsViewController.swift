@@ -164,5 +164,41 @@ class SettingsViewController: UITableViewController, CNContactPickerDelegate {
         print("Exists? \(entitiesCount)")
         return entitiesCount > 0
     }
+    
+    //delete
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        
+        if editingStyle == .delete {
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "EmergencyContact")
+            fetchRequest.predicate = NSPredicate(format: "telephoneNumber == %@", (self.people[indexPath.row].value(forKey: "telephoneNumber") as? String)!)
+            fetchRequest.includesSubentities = false
+            
+            if let result = try? managedContext.fetch(fetchRequest) {
+                for object in result {
+                    let person = object as! NSManagedObject
+                    print("name: \(person.value(forKey: "name"))")
+                    
+                    managedContext.delete(object as! NSManagedObject)
+                    do {
+                        try managedContext.save()
+                        self.people.remove(at: indexPath.row)
+                        tableView.deleteRows(at: [indexPath], with: .fade)
+                    } catch let error as NSError {
+                        print("Could not save. \(error), \(error.userInfo)")
+                    }
+                }
+               
+            }
+            
+            
+
+        }
+    }
 }
 
