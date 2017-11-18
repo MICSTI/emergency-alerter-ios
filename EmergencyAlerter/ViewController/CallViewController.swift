@@ -8,10 +8,14 @@
 
 
 import UIKit
+import AudioToolbox
 
 class CallViewController: UIViewController {
     
     @IBOutlet weak var CallButton: UIButton!
+    
+    var counter = 0
+    var timer : Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +31,17 @@ class CallViewController: UIViewController {
     }
     
     @objc private func callButtonClicked() {
+        
+        vibrate()
         UIView.animate(withDuration: 1.0,
                        delay: 0,
                        options: [.autoreverse],
                     animations: {
-                        UIView.setAnimationRepeatCount(5)
+                        UIView.setAnimationRepeatCount(4)
                         
                         self.CallButton.transform = CGAffineTransform(scaleX: 0.45, y: 0.45)
                         self.CallButton.backgroundColor = UIColor.red
+
                     },
                     completion: { _ in
                         self.CallButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
@@ -43,6 +50,22 @@ class CallViewController: UIViewController {
         )
         
         
+    }
+    
+    func vibrate() {
+        counter = 0
+        timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(self.vibratePhone), userInfo: nil, repeats: true)
+    }
+    
+    @objc private func vibratePhone() {
+        counter+=1
+        switch counter {
+            case 1,2,3,4,5:
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+                print("I: \(counter)")
+            default:
+            timer?.invalidate()
+            }
     }
 }
 

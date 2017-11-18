@@ -65,9 +65,13 @@ class SettingsViewController: UITableViewController, CNContactPickerDelegate {
         let userName:String = contact.givenName + " " + contact.familyName
         // user phone number
         let userPhoneNumbers:[CNLabeledValue<CNPhoneNumber>] = contact.phoneNumbers
-        let firstPhoneNumber:CNPhoneNumber = userPhoneNumbers[0].value
-        // user phone number string
-        let primaryPhoneNumberStr:String = firstPhoneNumber.stringValue
+            
+        if(userPhoneNumbers.isEmpty) {
+           // TODO show alert dialog
+            return
+        }
+        
+      let firstPhoneNumber:CNPhoneNumber = userPhoneNumbers[0].value
         
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
