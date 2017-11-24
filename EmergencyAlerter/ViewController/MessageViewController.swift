@@ -51,6 +51,7 @@ class MessageViewController: UIViewController {
     //Vibration
     func vibrate() {
         counter = 0
+        //TODO check if vibrate is active
         timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(self.vibratePhone), userInfo: nil, repeats: true)
     }
     

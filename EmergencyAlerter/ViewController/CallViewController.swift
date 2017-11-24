@@ -50,6 +50,7 @@ class CallViewController: UIViewController {
     //Vibration
     func vibrate() {
         counter = 0
+        //TODO check if vibrate is active
         timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(self.vibratePhone), userInfo: nil, repeats: true)
     }
     
@@ -66,6 +67,7 @@ class CallViewController: UIViewController {
     
     // Motion detection: Shake
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        //TODO check if call on shake is active
         if motion == .motionShake {
             // vibrate once on shake
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
