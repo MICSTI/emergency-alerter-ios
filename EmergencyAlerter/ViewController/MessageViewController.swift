@@ -1,10 +1,9 @@
-//
-//  CallViewController.swift
-//  EmergencyAlerter
-//
-//  Created by Mayerhofer Florian on 17/11/2017.
-//  Copyright © 2017 T11. All rights reserved.
-//
+/*
+ Copyright (C) 2017 by F. Mayerhofer, M. Stifter & A. Butja
+ 
+ Abstract:
+    A view controller that lets the user send emergency text messages to preconfigured emergency contacts.
+ */
 
 
 import UIKit

@@ -18,7 +18,6 @@
 		D0CEE1D41FB4546B00E061E3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CEE1D31FB4546B00E061E3 /* SettingsViewController.swift */; };
 		D0DB73311FBF4EFB00187EF3 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB73301FBF4EFB00187EF3 /* CallViewController.swift */; };
 		D0F6468A1FB1DCC200D3242F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F646891FB1DCC200D3242F /* AppDelegate.swift */; };
-		D0F6468C1FB1DCC200D3242F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6468B1FB1DCC200D3242F /* ViewController.swift */; };
 		D0F6468F1FB1DCC200D3242F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F6468D1FB1DCC200D3242F /* Main.storyboard */; };
 		D0F646911FB1DCC200D3242F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0F646901FB1DCC200D3242F /* Assets.xcassets */; };
 		D0F646941FB1DCC200D3242F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F646921FB1DCC200D3242F /* LaunchScreen.storyboard */; };
@@ -93,7 +92,6 @@
 		D0DB73301FBF4EFB00187EF3 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		D0F646861FB1DCC200D3242F /* EmergencyAlerter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmergencyAlerter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F646891FB1DCC200D3242F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D0F6468B1FB1DCC200D3242F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D0F6468E1FB1DCC200D3242F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0F646901FB1DCC200D3242F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0F646931FB1DCC200D3242F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -200,7 +198,6 @@
 			children = (
 				D0F8B24C1FB31EFE0005F472 /* ViewController */,
 				D0F646891FB1DCC200D3242F /* AppDelegate.swift */,
-				D0F6468B1FB1DCC200D3242F /* ViewController.swift */,
 				D0F6468D1FB1DCC200D3242F /* Main.storyboard */,
 				D0F646901FB1DCC200D3242F /* Assets.xcassets */,
 				D0F646921FB1DCC200D3242F /* LaunchScreen.storyboard */,
@@ -558,7 +555,6 @@
 				D0DB73311FBF4EFB00187EF3 /* CallViewController.swift in Sources */,
 				D040A8601FBF58B600731C24 /* MessageViewController.swift in Sources */,
 				D0F8B2561FB326200005F472 /* PoliceLoader.swift in Sources */,
-				D0F6468C1FB1DCC200D3242F /* ViewController.swift in Sources */,
 				D0F6468A1FB1DCC200D3242F /* AppDelegate.swift in Sources */,
 				D0CEE1D11FB453CB00E061E3 /* EmergencyAlerter.xcdatamodeld in Sources */,
 				D0CEE1D41FB4546B00E061E3 /* SettingsViewController.swift in Sources */,

@@ -1,10 +1,9 @@
-//
-//  PoliceLoader.swift
-//  EmergencyAlerter
-//
-//  Created by Mayerhofer Florian on 08/11/2017.
-//  Copyright © 2017 T11. All rights reserved.
-//
+/*
+ Copyright (C) 2017 by F. Mayerhofer, M. Stifter & A. Butja
+ 
+ Abstract:
+    Helper class to load police station information from web API.
+ */
 
 import Foundation
 import Alamofire

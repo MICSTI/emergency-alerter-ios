@@ -1,10 +1,9 @@
-//
-//  ViewController.swift
-//  EmergencyAlerter
-//
-//  Created by Mayerhofer Florian on 07/11/2017.
-//  Copyright © 2017 T11. All rights reserved.
-//
+/*
+ Copyright (C) 2017 by F. Mayerhofer, M. Stifter & A. Butja
+ 
+ Abstract:
+    A view controller that lets the user configure important settings (i.e. emergency contacts).
+ */
 
 import UIKit
 import CoreData
