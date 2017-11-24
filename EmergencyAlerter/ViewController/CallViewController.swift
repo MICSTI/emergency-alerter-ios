@@ -35,44 +35,41 @@ class CallViewController: UIViewController {
         UIView.animate(withDuration: 1.0,
                        delay: 0,
                        options: [.autoreverse],
-                    animations: {
+                       animations: {
                         UIView.setAnimationRepeatCount(4)
-                        
                         self.CallButton.transform = CGAffineTransform(scaleX: 0.45, y: 0.45)
                         self.CallButton.backgroundColor = UIColor.red
-
-                    },
-                    completion: { _ in
+                       },
+                       completion: { _ in
                         self.CallButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                         self.CallButton.backgroundColor = UIColor(red: 192.0 / 255.0, green: 57.0 / 255.0, blue: 43.0 / 255.0, alpha: 1.0)
-                    }
+                        }
         )
-        
-        
     }
     
+    //Vibration
     func vibrate() {
         counter = 0
         timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(self.vibratePhone), userInfo: nil, repeats: true)
     }
     
+    //Custom Pattern for vibration
     @objc private func vibratePhone() {
         counter+=1
         switch counter {
             case 1,2,3,4,5:
                 AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
-                print("I: \(counter)")
             default:
             timer?.invalidate()
             }
     }
     
-    // shake it, biatches!
+    // Motion detection: Shake
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
-        print("motion ended: \(motion)")
         if motion == .motionShake {
             // vibrate once on shake
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+            //TODO call emergency call method
         }
     }
 

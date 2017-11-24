@@ -9,11 +9,10 @@ import UIKit
 import CoreLocation
 import MapKit
 
+// Wrapper for lng and lat of current position
 class CurrentLocation: LocationAware{
     public var latitude: Double;
     public var longitude: Double;
-    
-   
     
     public init(_ lat: Double, _ long: Double) {
         self.latitude = lat
@@ -25,16 +24,11 @@ class CurrentLocation: LocationAware{
     }
 }
 
-extension MKPinAnnotationView {
-    class func blue() -> UIColor {
-        return UIColor.blue
-    }
-}
-
 class PoliceViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var map: MKMapView!
-
+    
+    let policeLoader = PoliceLoader("https://crpladev-emal.herokuapp.com/api/nearest/police");
     var locationManager = CLLocationManager()
     
     var policeStations = [PoliceStation] ()
@@ -44,18 +38,17 @@ class PoliceViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //Init locationmanager
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
+        //Init map
         let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
         let location = CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
         let region = MKCoordinateRegion(center: location, span: span)
         self.map.setRegion(region, animated: true)
-        
-       
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,27 +60,23 @@ class PoliceViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         print(locations)
         
         let allAnnotations = self.map.annotations
-        
         let userLocation: CLLocation = locations[0]
         
+        //Update position only if user moved
         if(userLocation.distance(from: currentLocation) < 2) {
             return
         }
-        print("updating small")
         currentLocation = userLocation
-        
         let lat = userLocation.coordinate.latitude
         let lon = userLocation.coordinate.longitude
         
-
-        
-        //save last location, compare, if greater than threshold reload police
+        //Reload police stations only if user travelled more than 200m. Saves energy because of less network calls
         let distanceFromOriginal = originalLocation.distance(from: currentLocation)
         if(distanceFromOriginal > 200){
             map.setCenter(CLLocationCoordinate2D(latitude: lat, longitude: lon), animated: false)
             originalLocation = currentLocation
+            //Reset Map, Remove markers
             self.map.removeAnnotations(allAnnotations)
-            let policeLoader = PoliceLoader("https://crpladev-emal.herokuapp.com/api/nearest/police");
             policeLoader.loadFromInternet(current: CurrentLocation(lat,lon)) { (polices, err) in
                 for police in polices! {
                     let policeLabel = MKPointAnnotation()
@@ -96,15 +85,13 @@ class PoliceViewController: UIViewController, MKMapViewDelegate, CLLocationManag
                     self.map.addAnnotation(policeLabel)
                 }
             }
-            
         }
         
+        //Update current user location
         self.map.removeAnnotation(myPosLabel)
-        // add pin (Annotation)
         myPosLabel.coordinate = currentLocation.coordinate
         myPosLabel.title = "You are here"
         self.map.addAnnotation(myPosLabel)
-        
     }
    
     

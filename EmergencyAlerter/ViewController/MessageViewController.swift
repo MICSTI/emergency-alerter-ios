@@ -7,10 +7,14 @@
 
 
 import UIKit
+import AudioToolbox
 
 class MessageViewController: UIViewController {
     
     @IBOutlet weak var MessageButton: UIButton!
+    
+    var counter = 0
+    var timer : Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +30,7 @@ class MessageViewController: UIViewController {
     }
     
     @objc private func messageButtonClicked() {
+        vibrate()
         UIView.animate(withDuration: 1.0,
                        delay: 0,
                        options: [.autoreverse],
@@ -42,6 +47,22 @@ class MessageViewController: UIViewController {
         )
         
         
+    }
+    //Vibration
+    func vibrate() {
+        counter = 0
+        timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(self.vibratePhone), userInfo: nil, repeats: true)
+    }
+    
+    //Custom Pattern for vibration
+    @objc private func vibratePhone() {
+        counter+=1
+        switch counter {
+        case 1,3,5:
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+        default:
+            timer?.invalidate()
+        }
     }
 }
 

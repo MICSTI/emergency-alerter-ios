@@ -14,10 +14,12 @@ class SettingsViewController: UITableViewController, CNContactPickerDelegate {
     
     @IBOutlet weak var addContact: UIButton!
     
+    // Emergency Contacts in List
     var people: [NSManagedObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Fill Emergency Contact list from storage
         getContactsFromStore()
    
      
@@ -33,7 +35,6 @@ class SettingsViewController: UITableViewController, CNContactPickerDelegate {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("peoples: \(people.count)")
         return people.count
     }
     
@@ -45,8 +46,6 @@ class SettingsViewController: UITableViewController, CNContactPickerDelegate {
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
-        print("Button tapped")
-       
         let contactPicker = CNContactPickerViewController()
         contactPicker.delegate = self
         contactPicker.displayedPropertyKeys = [CNContactGivenNameKey, CNContactPhoneNumbersKey]
@@ -109,39 +108,30 @@ class SettingsViewController: UITableViewController, CNContactPickerDelegate {
     }
     
     func getContactsFromStore() {
-        print(" getButton tapped")
        guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
                 return
         }
         
-        // 1
-        let managedContext =
-            appDelegate.persistentContainer.viewContext
-        
+        let managedContext = appDelegate.persistentContainer.viewContext
         // Initialize Fetch Request
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
-        
         // Create Entity Description
         let entityDescription = NSEntityDescription.entity(forEntityName: "EmergencyContact", in: managedContext)
-        
         // Configure Fetch Request
         fetchRequest.entity = entityDescription
-        
+        // Load from storage
         do {
             let result = try managedContext.fetch(fetchRequest) as! [EmergencyContact]
-            for contact in result {
-                print(contact.name!)
-            }
+            // fill list with result
             people = result
-            
         } catch {
             let fetchError = error as NSError
             print(fetchError)
         }
-        
     }
     
+    //Check if contact already exists
     func contactExists(telephone: String) -> Bool {
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
@@ -153,18 +143,16 @@ class SettingsViewController: UITableViewController, CNContactPickerDelegate {
         fetchRequest.includesSubentities = false
         
         var entitiesCount = 0
-        
         do {
             entitiesCount = try managedContext.count(for: fetchRequest)
         }
         catch {
             print("error executing fetch request: \(error)")
         }
-        print("Exists? \(entitiesCount)")
         return entitiesCount > 0
     }
     
-    //delete
+    //Delete from List of emergency contacts
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
@@ -174,16 +162,17 @@ class SettingsViewController: UITableViewController, CNContactPickerDelegate {
         
         
         if editingStyle == .delete {
+            //init fetchrequest load entity based on telephone number
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "EmergencyContact")
             fetchRequest.predicate = NSPredicate(format: "telephoneNumber == %@", (self.people[indexPath.row].value(forKey: "telephoneNumber") as? String)!)
             fetchRequest.includesSubentities = false
             
+            //Delete found entities from storage
             if let result = try? managedContext.fetch(fetchRequest) {
                 for object in result {
-                    let person = object as! NSManagedObject
-                    
                     managedContext.delete(object as! NSManagedObject)
                     do {
+                        //Commit and remove items from list and view too
                         try managedContext.save()
                         self.people.remove(at: indexPath.row)
                         tableView.deleteRows(at: [indexPath], with: .fade)
@@ -191,11 +180,7 @@ class SettingsViewController: UITableViewController, CNContactPickerDelegate {
                         print("Could not save. \(error), \(error.userInfo)")
                     }
                 }
-               
             }
-            
-            
-
         }
     }
 }
