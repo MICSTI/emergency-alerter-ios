@@ -58,7 +58,6 @@ class SettingsViewController: UITableViewController, CNContactPickerDelegate {
     
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
         // You can fetch selected name and number in the following way
-        
         // user name
         let userName:String = contact.givenName + " " + contact.familyName
         // user phone number

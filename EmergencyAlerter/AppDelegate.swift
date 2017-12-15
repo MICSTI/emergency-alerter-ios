@@ -40,7 +40,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        
+        print("url \(url)")
+        print("url host :\(url.host!)")
+        print("url path :\(url.path)")
+        
+        
+        let urlPath : String = url.path as String!
+        let urlHost : String = url.host as String!
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let adv: AdvancedSettingsViewController = mainStoryboard.instantiateViewController(withIdentifier: "AdvancedSettings") as! AdvancedSettingsViewController
 
+         //TODO set text field with provided number
+        
+        
+        let tabController = self.window?.rootViewController as! UITabBarController
+        tabController.selectedIndex = 3;
+        let settings = tabController.selectedViewController as! UINavigationController
+        settings.pushViewController(adv, animated: true)
+        
+        
+        
+     
+        return true
+    }
+    
     // MARK: - Core Data stack
     
     lazy var persistentContainer: NSPersistentContainer = {
@@ -86,5 +112,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    
+    
 }
 
