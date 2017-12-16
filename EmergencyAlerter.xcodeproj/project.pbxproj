@@ -345,16 +345,16 @@
 				TargetAttributes = {
 					D0F646851FB1DCC200D3242F = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					D0F646971FB1DCC200D3242F = {
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					D0F646A61FB1DCC200D3242F = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -730,12 +730,14 @@
 			baseConfigurationReference = 58502FAC4EAD1FE4BA0B8D54 /* Pods-EmergencyAlerter WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GCPP8UU94T;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = FHJ6QDMKMG;
 				INFOPLIST_FILE = "EmergencyAlerter WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = at.fhj.ims.t11.EmergencyAlerter.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = at.fhj.ims.t11.EA.WK.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "525fca1f-ddb5-49e3-a0a9-6baf29143217";
+				PROVISIONING_PROFILE_SPECIFIER = 2017wsIMS16ItmDevEmergencyAlerterWatchKitE_DevProf;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -749,12 +751,13 @@
 			baseConfigurationReference = 5A85FB31B6385CC79BA37BDD /* Pods-EmergencyAlerter WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GCPP8UU94T;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "EmergencyAlerter WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = at.fhj.ims.t11.EmergencyAlerter.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = at.fhj.ims.t11.EA.WK.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -770,13 +773,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GCPP8UU94T;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = FHJ6QDMKMG;
 				IBSC_MODULE = EmergencyAlerter_WatchKit_Extension;
 				INFOPLIST_FILE = "EmergencyAlerter WatchKit App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = at.fhj.ims.t11.EmergencyAlerter.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = at.fhj.ims.t11.EA.WK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5c0e56e3-2717-413e-b938-56956e2daef1";
+				PROVISIONING_PROFILE_SPECIFIER = 2017wsIMS16ItmDevEAWatchKit_DevProf;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Model/EmergencyAlerter WatchKit App-Bridging-Header.h";
@@ -794,13 +799,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GCPP8UU94T;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				IBSC_MODULE = EmergencyAlerter_WatchKit_Extension;
 				INFOPLIST_FILE = "EmergencyAlerter WatchKit App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = at.fhj.ims.t11.EmergencyAlerter.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = at.fhj.ims.t11.EA.WK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Model/EmergencyAlerter WatchKit App-Bridging-Header.h";
@@ -816,14 +822,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GCPP8UU94T;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = FHJ6QDMKMG;
 				INFOPLIST_FILE = EmergencyAlerter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = at.fhj.ims.t11.EmergencyAlerter;
+				PRODUCT_BUNDLE_IDENTIFIER = at.fhj.ims.t11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "1ddbc603-edd3-4492-a353-494fd5436bca";
+				PROVISIONING_PROFILE_SPECIFIER = 2017wsIMS16EmergencyAlerterDevProfile;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -835,11 +841,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GCPP8UU94T;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EmergencyAlerter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = at.fhj.ims.t11.EmergencyAlerter;
+				PRODUCT_BUNDLE_IDENTIFIER = at.fhj.ims.t11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

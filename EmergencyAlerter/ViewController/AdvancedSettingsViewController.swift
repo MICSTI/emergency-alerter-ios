@@ -13,7 +13,6 @@ class AdvancedSettingsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emergencyNumberField: UITextField!
     @IBOutlet weak var vibrateOnCallSwitch: UISwitch!
     @IBOutlet weak var vibrateOnMessageSwitch: UISwitch!
-    @IBOutlet weak var aboutWeb: WKWebView!
 
     let defaults = UserDefaults.standard
 

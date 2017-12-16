@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>at.fhj.ims.t11.EmergencyAlerter</string>
+	<string>at.fhj.ims.t11</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

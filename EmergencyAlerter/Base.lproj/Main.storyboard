@@ -200,15 +200,6 @@
                                     </switch>
                                 </subviews>
                             </stackView>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NBV-06-qxG">
-                                <rect key="frame" x="62" y="471" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -228,7 +219,6 @@
                         <viewLayoutGuide key="safeArea" id="gLN-iK-9Cx"/>
                     </view>
                     <connections>
-                        <outlet property="aboutWeb" destination="NBV-06-qxG" id="Ug5-w3-qPU"/>
                         <outlet property="callOnShakeSwitch" destination="S3K-lP-gYD" id="AgA-BL-Trc"/>
                         <outlet property="emergencyNumberField" destination="4l8-Ud-hMD" id="WT9-Md-j6M"/>
                         <outlet property="vibrateOnCallSwitch" destination="Gj4-qF-1l0" id="dCx-M5-f3O"/>
