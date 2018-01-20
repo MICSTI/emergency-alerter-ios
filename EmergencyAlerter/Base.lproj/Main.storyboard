@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0P-t3-e2O">
-                                <rect key="frame" x="20" y="20" width="335" height="570"/>
+                                <rect key="frame" x="20" y="40" width="335" height="550"/>
                                 <color key="backgroundColor" red="0.82745098039215681" green="0.32941176470588235" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="bt"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
@@ -31,7 +31,7 @@
                         <constraints>
                             <constraint firstItem="n0P-t3-e2O" firstAttribute="leading" secondItem="n8l-OF-cE6" secondAttribute="leading" constant="20" id="23w-sq-q5M"/>
                             <constraint firstItem="n8l-OF-cE6" firstAttribute="trailing" secondItem="n0P-t3-e2O" secondAttribute="trailing" constant="20" id="e38-Pm-aVq"/>
-                            <constraint firstItem="n0P-t3-e2O" firstAttribute="top" secondItem="n8l-OF-cE6" secondAttribute="top" id="iDq-Aw-3IY"/>
+                            <constraint firstItem="n0P-t3-e2O" firstAttribute="top" secondItem="n8l-OF-cE6" secondAttribute="top" constant="20" id="iDq-Aw-3IY"/>
                             <constraint firstItem="n8l-OF-cE6" firstAttribute="bottom" secondItem="n0P-t3-e2O" secondAttribute="bottom" constant="28" id="iNL-yZ-KLw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="n8l-OF-cE6"/>
