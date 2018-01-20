@@ -17,6 +17,7 @@ class CallViewController: UIViewController, UNUserNotificationCenterDelegate {
     
     var counter = 0
     var timer : Timer?
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,14 +38,15 @@ class CallViewController: UIViewController, UNUserNotificationCenterDelegate {
     
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        print("Test Foreground: \(notification.request.identifier)")
         completionHandler([.alert, .sound])
     }
 
     
     @objc private func callButtonClicked() {
+        if(defaults.bool(forKey: "vibrateOnCall")){
+            vibrate()
+        }
         
-        vibrate()
         UIView.animate(withDuration: 1.0,
                        delay: 0,
                        options: [.autoreverse],
@@ -63,7 +65,6 @@ class CallViewController: UIViewController, UNUserNotificationCenterDelegate {
     //Vibration
     func vibrate() {
         counter = 0
-        //TODO check if vibrate is active
         timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(self.vibratePhone), userInfo: nil, repeats: true)
     }
     
@@ -80,8 +81,7 @@ class CallViewController: UIViewController, UNUserNotificationCenterDelegate {
     
     // Motion detection: Shake
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
-        //TODO check if call on shake is active
-        if motion == .motionShake {
+        if motion == .motionShake && defaults.bool(forKey: "callOnShake") {
             // vibrate once on shake
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
             //TODO call emergency call method

@@ -2,7 +2,7 @@
  Copyright (C) 2017 by F. Mayerhofer, M. Stifter & A. Butja
  
  Abstract:
-    A view controller that lets the user send emergency text messages to preconfigured emergency contacts.
+ A view controller that lets the user send emergency text messages to preconfigured emergency contacts.
  */
 
 
@@ -15,6 +15,7 @@ class MessageViewController: UIViewController {
     
     var counter = 0
     var timer : Timer?
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,10 @@ class MessageViewController: UIViewController {
     }
     
     @objc private func messageButtonClicked() {
-        vibrate()
+        
+        if(defaults.bool(forKey: "vibrateOnMessage")){
+            vibrate()
+        }
         UIView.animate(withDuration: 1.0,
                        delay: 0,
                        options: [.autoreverse],
@@ -43,15 +47,12 @@ class MessageViewController: UIViewController {
                        completion: { _ in
                         self.MessageButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                         self.MessageButton.backgroundColor = UIColor(red: 211.0 / 255.0, green: 84.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0)
-        }
-        )
-        
+        })
         
     }
     //Vibration
     func vibrate() {
         counter = 0
-        //TODO check if vibrate is active
         timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(self.vibratePhone), userInfo: nil, repeats: true)
     }
     
