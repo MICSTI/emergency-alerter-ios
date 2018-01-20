@@ -8,8 +8,10 @@
 import UIKit
 import AudioToolbox
 import CoreMotion
+import UserNotifications
+import CoreData
 
-class CallViewController: UIViewController {
+class CallViewController: UIViewController, UNUserNotificationCenterDelegate {
     
     @IBOutlet weak var CallButton: UIButton!
     
@@ -19,15 +21,26 @@ class CallViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        UNUserNotificationCenter.current().delegate = self
         
         // add click target to call button
         CallButton.addTarget(self, action: #selector(self.callButtonClicked), for: .touchUpInside)
+        
+        initNotifSetupCheck()
+        checkIfContactsSet()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        print("Test Foreground: \(notification.request.identifier)")
+        completionHandler([.alert, .sound])
+    }
+
     
     @objc private func callButtonClicked() {
         
@@ -75,5 +88,62 @@ class CallViewController: UIViewController {
         }
     }
 
+    func checkIfContactsSet() {
+        let people = getContactsFromStore()
+        print("Check")
+        print("\(people.count)")
+        if(people.count < 1) {
+            sendLocalNotif()
+        }
+    }
+    
+    func initNotifSetupCheck() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert]){ (success, error) in
+            if (success) {
+                print("success notif")
+            } else {
+                print("fial notif")
+            }
+        }
+    }
+    
+    func getContactsFromStore() -> [NSManagedObject] {
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return []
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        // Initialize Fetch Request
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
+        // Create Entity Description
+        let entityDescription = NSEntityDescription.entity(forEntityName: "EmergencyContact", in: managedContext)
+        // Configure Fetch Request
+        fetchRequest.entity = entityDescription
+        // Load from storage
+        var result: [EmergencyContact] = []
+        do {
+            result = try managedContext.fetch(fetchRequest) as! [EmergencyContact]
+            // fill list with result
+        } catch {
+            let fetchError = error as NSError
+            print(fetchError)
+        }
+        return result
+    }
+    
+    func sendLocalNotif() {
+        print("sending")
+        let notification = UNMutableNotificationContent()
+        notification.title = "No EmergencyContacts set"
+        notification.body = "Please check your settings and chooese Emergency Contacts"
+        
+        let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let request = UNNotificationRequest(identifier: "NoSettingNotif", content: notification, trigger: notificationTrigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        
+    }
+    
 }
 
