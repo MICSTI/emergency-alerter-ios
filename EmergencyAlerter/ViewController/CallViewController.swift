@@ -60,6 +60,13 @@ class CallViewController: UIViewController, UNUserNotificationCenterDelegate {
                         self.CallButton.backgroundColor = UIColor(red: 192.0 / 255.0, green: 57.0 / 255.0, blue: 43.0 / 255.0, alpha: 1.0)
                         }
         )
+        let emergencyNumber = defaults.string(forKey: "emergencyNumber")!;
+        if let phoneCallUrl = URL(string: "tel://\(emergencyNumber)") {
+            let application:UIApplication = UIApplication.shared
+            if(application.canOpenURL(phoneCallUrl)){
+                application.open(phoneCallUrl, completionHandler: nil)
+            }
+        }
     }
     
     //Vibration
