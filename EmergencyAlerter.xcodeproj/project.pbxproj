@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6D8073D90EC2962F8CD0E728 /* Pods_EmergencyAlerter_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E801691A5EA9F8DA1E16F21 /* Pods_EmergencyAlerter_WatchKit_App.framework */; };
+		86D1AA0620133C97005C04E8 /* EmergencyAlerterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1AA0520133C97005C04E8 /* EmergencyAlerterUITests.swift */; };
 		BCAE6FCE4E815DC7B64A5B94 /* Pods_EmergencyAlerter_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6761FDA18B94FD418C92EB7B /* Pods_EmergencyAlerter_WatchKit_Extension.framework */; };
 		CC9E23CBE931EC5365274637 /* Pods_EmergencyAlerter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D623033709F287680B3B93DE /* Pods_EmergencyAlerter.framework */; };
 		D00A898B1FB329F500968701 /* PoliceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A898A1FB329F500968701 /* PoliceViewController.swift */; };
@@ -35,6 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		86D1AA0820133C97005C04E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0F6467E1FB1DCC200D3242F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0F646851FB1DCC200D3242F;
+			remoteInfo = EmergencyAlerter;
+		};
 		D0F6469A1FB1DCC200D3242F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D0F6467E1FB1DCC200D3242F /* Project object */;
@@ -82,6 +90,9 @@
 		58502FAC4EAD1FE4BA0B8D54 /* Pods-EmergencyAlerter WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyAlerter WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmergencyAlerter WatchKit Extension/Pods-EmergencyAlerter WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		5A85FB31B6385CC79BA37BDD /* Pods-EmergencyAlerter WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyAlerter WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmergencyAlerter WatchKit Extension/Pods-EmergencyAlerter WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		6761FDA18B94FD418C92EB7B /* Pods_EmergencyAlerter_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmergencyAlerter_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86D1AA0320133C97005C04E8 /* EmergencyAlerterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmergencyAlerterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86D1AA0520133C97005C04E8 /* EmergencyAlerterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyAlerterUITests.swift; sourceTree = "<group>"; };
+		86D1AA0720133C97005C04E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87E0807B6FC2FB68172A31CA /* Pods-EmergencyAlerter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergencyAlerter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmergencyAlerter/Pods-EmergencyAlerter.debug.xcconfig"; sourceTree = "<group>"; };
 		D00A898A1FB329F500968701 /* PoliceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceViewController.swift; sourceTree = "<group>"; };
 		D040A85F1FBF58B600731C24 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +136,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		86D1AA0020133C97005C04E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0F646831FB1DCC200D3242F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -157,6 +175,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		86D1AA0420133C97005C04E8 /* EmergencyAlerterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				86D1AA0520133C97005C04E8 /* EmergencyAlerterUITests.swift */,
+				86D1AA0720133C97005C04E8 /* Info.plist */,
+			);
+			path = EmergencyAlerterUITests;
+			sourceTree = "<group>";
+		};
 		B4A864E5783072F56C883009 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +206,7 @@
 				D0F646881FB1DCC200D3242F /* EmergencyAlerter */,
 				D0F6469C1FB1DCC200D3242F /* EmergencyAlerter WatchKit App */,
 				D0F646AB1FB1DCC200D3242F /* EmergencyAlerter WatchKit Extension */,
+				86D1AA0420133C97005C04E8 /* EmergencyAlerterUITests */,
 				D0F646871FB1DCC200D3242F /* Products */,
 				B4A864E5783072F56C883009 /* Pods */,
 				05EEE4E1D9B531FE05B45BA8 /* Frameworks */,
@@ -191,6 +219,7 @@
 				D0F646861FB1DCC200D3242F /* EmergencyAlerter.app */,
 				D0F646981FB1DCC200D3242F /* EmergencyAlerter WatchKit App.app */,
 				D0F646A71FB1DCC200D3242F /* EmergencyAlerter WatchKit Extension.appex */,
+				86D1AA0320133C97005C04E8 /* EmergencyAlerterUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -271,6 +300,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		86D1AA0220133C97005C04E8 /* EmergencyAlerterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86D1AA0C20133C97005C04E8 /* Build configuration list for PBXNativeTarget "EmergencyAlerterUITests" */;
+			buildPhases = (
+				86D1A9FF20133C97005C04E8 /* Sources */,
+				86D1AA0020133C97005C04E8 /* Frameworks */,
+				86D1AA0120133C97005C04E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86D1AA0920133C97005C04E8 /* PBXTargetDependency */,
+			);
+			name = EmergencyAlerterUITests;
+			productName = EmergencyAlerterUITests;
+			productReference = 86D1AA0320133C97005C04E8 /* EmergencyAlerterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		D0F646851FB1DCC200D3242F /* EmergencyAlerter */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0F646BD1FB1DCC200D3242F /* Build configuration list for PBXNativeTarget "EmergencyAlerter" */;
@@ -343,6 +390,11 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = T11;
 				TargetAttributes = {
+					86D1AA0220133C97005C04E8 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D0F646851FB1DCC200D3242F;
+					};
 					D0F646851FB1DCC200D3242F = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Manual;
@@ -374,11 +426,19 @@
 				D0F646851FB1DCC200D3242F /* EmergencyAlerter */,
 				D0F646971FB1DCC200D3242F /* EmergencyAlerter WatchKit App */,
 				D0F646A61FB1DCC200D3242F /* EmergencyAlerter WatchKit Extension */,
+				86D1AA0220133C97005C04E8 /* EmergencyAlerterUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		86D1AA0120133C97005C04E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0F646841FB1DCC200D3242F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -548,6 +608,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		86D1A9FF20133C97005C04E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86D1AA0620133C97005C04E8 /* EmergencyAlerterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0F646821FB1DCC200D3242F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -578,6 +646,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		86D1AA0920133C97005C04E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0F646851FB1DCC200D3242F /* EmergencyAlerter */;
+			targetProxy = 86D1AA0820133C97005C04E8 /* PBXContainerItemProxy */;
+		};
 		D0F6469B1FB1DCC200D3242F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D0F646971FB1DCC200D3242F /* EmergencyAlerter WatchKit App */;
@@ -618,6 +691,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		86D1AA0A20133C97005C04E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EmergencyAlerterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "www.fh-joanneum.at.EmergencyAlerterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EmergencyAlerter;
+			};
+			name = Debug;
+		};
+		86D1AA0B20133C97005C04E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EmergencyAlerterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "www.fh-joanneum.at.EmergencyAlerterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EmergencyAlerter;
+			};
+			name = Release;
+		};
 		D0F646B31FB1DCC200D3242F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -856,6 +957,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		86D1AA0C20133C97005C04E8 /* Build configuration list for PBXNativeTarget "EmergencyAlerterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86D1AA0A20133C97005C04E8 /* Debug */,
+				86D1AA0B20133C97005C04E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D0F646811FB1DCC200D3242F /* Build configuration list for PBXProject "EmergencyAlerter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
