@@ -8,14 +8,17 @@
 
 import UIKit
 import AudioToolbox
+import MessageUI
+import CoreData
 
-class MessageViewController: UIViewController {
+class MessageViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     
     @IBOutlet weak var MessageButton: UIButton!
     
     var counter = 0
     var timer : Timer?
     let defaults = UserDefaults.standard
+    var people: [NSManagedObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +26,7 @@ class MessageViewController: UIViewController {
         
         // add click target to call button
         MessageButton.addTarget(self, action: #selector(self.messageButtonClicked), for: .touchUpInside)
+        people = getContactsFromStore()
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,8 +52,21 @@ class MessageViewController: UIViewController {
                         self.MessageButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                         self.MessageButton.backgroundColor = UIColor(red: 211.0 / 255.0, green: 84.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0)
         })
+        sendMessage()
         
     }
+    func sendMessage(){
+        let messageVC = MFMessageComposeViewController()
+        messageVC.body = "I need help"
+        messageVC.recipients = people.map({(contact: NSManagedObject ) -> String in
+            let cnt = contact as! EmergencyContact
+            print("\(cnt.telephoneNumber!)")
+            return cnt.telephoneNumber!
+        })
+        messageVC.messageComposeDelegate = self
+        present(messageVC, animated: true, completion: nil)
+    }
+    
     //Vibration
     func vibrate() {
         counter = 0
@@ -65,6 +82,35 @@ class MessageViewController: UIViewController {
         default:
             timer?.invalidate()
         }
+    }
+    
+    func getContactsFromStore() -> [NSManagedObject] {
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return []
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        // Initialize Fetch Request
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
+        // Create Entity Description
+        let entityDescription = NSEntityDescription.entity(forEntityName: "EmergencyContact", in: managedContext)
+        // Configure Fetch Request
+        fetchRequest.entity = entityDescription
+        // Load from storage
+        var result: [EmergencyContact] = []
+        do {
+            result = try managedContext.fetch(fetchRequest) as! [EmergencyContact]
+            // fill list with result
+        } catch {
+            let fetchError = error as NSError
+            print(fetchError)
+        }
+        return result
+    }
+    
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }
 
