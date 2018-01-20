@@ -1,10 +1,9 @@
-//
-//  EmergencyAlerterTests.swift
-//  EmergencyAlerterTests
-//
-//  Created by Arlinda Butja on 20/01/2018.
-//  Copyright © 2018 T11. All rights reserved.
-//
+/*
+ Copyright (C) 2017 by F. Mayerhofer, M. Stifter & A. Butja
+ 
+ Abstract:
+    Unit Test Class for testing the connection to the PoliceAPI
+ */
 
 import XCTest
 @testable import EmergencyAlerter
