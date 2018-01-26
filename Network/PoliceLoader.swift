@@ -23,6 +23,8 @@ public class PoliceLoader {
     func loadFromInternet<T: LocationAware>(current: T, completion: @escaping PoliceStationDownloadCompleteHandler) {
         apiUrl.append("?lat=\(current.latitude)&lng=\(current.longitude)&radius=10000")
         
+        
+        
         Alamofire.request(apiUrl).responseArray { (response: DataResponse<[PoliceStation]>) in
             let policeArray = response.result.value
             

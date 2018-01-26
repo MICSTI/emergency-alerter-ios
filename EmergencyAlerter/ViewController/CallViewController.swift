@@ -21,14 +21,11 @@ class CallViewController: UIViewController, UNUserNotificationCenterDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         UNUserNotificationCenter.current().delegate = self
         
         // add click target to call button
-        CallButton.addTarget(self, action: #selector(self.callButtonClicked), for: .touchUpInside)
-        
+        CallButton.addTarget(self, action: #selector(self.callButtonClicked), for: .touchUpInside)        
         initNotifSetupCheck()
-        checkIfContactsSet()
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,17 +33,17 @@ class CallViewController: UIViewController, UNUserNotificationCenterDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    //Overwritten method to allow display IN-App Notification Display
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.alert, .sound])
     }
 
-    
+    //ONClick Handler for Button
     @objc private func callButtonClicked() {
         if(defaults.bool(forKey: "vibrateOnCall")){
             vibrate()
         }
-        
+        //Fancy Animation
         UIView.animate(withDuration: 1.0,
                        delay: 0,
                        options: [.autoreverse],
@@ -60,6 +57,7 @@ class CallViewController: UIViewController, UNUserNotificationCenterDelegate {
                         self.CallButton.backgroundColor = UIColor(red: 192.0 / 255.0, green: 57.0 / 255.0, blue: 43.0 / 255.0, alpha: 1.0)
                         }
         )
+        //Using telephone URL-Scheme to access phone app
         let emergencyNumber = defaults.string(forKey: "emergencyNumber")!;
         if let phoneCallUrl = URL(string: "tel://\(emergencyNumber)") {
             let application:UIApplication = UIApplication.shared
@@ -95,25 +93,25 @@ class CallViewController: UIViewController, UNUserNotificationCenterDelegate {
         }
     }
 
+    //Check if any Contacts are stored, if not, send notification
     func checkIfContactsSet() {
         let people = getContactsFromStore()
-        print("Check")
-        print("\(people.count)")
         if(people.count < 1) {
             sendLocalNotif()
         }
     }
-    
+    // Check/Request User to allow notifications
     func initNotifSetupCheck() {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert]){ (success, error) in
             if (success) {
-                print("success notif")
+                self.checkIfContactsSet()
             } else {
-                print("fial notif")
+                print("User does not want notifications")
             }
         }
     }
     
+    //Get stored Emergency Contacts
     func getContactsFromStore() -> [NSManagedObject] {
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
@@ -139,11 +137,11 @@ class CallViewController: UIViewController, UNUserNotificationCenterDelegate {
         return result
     }
     
+    //Build and Send notification
     func sendLocalNotif() {
-        print("sending")
         let notification = UNMutableNotificationContent()
-        notification.title = "No EmergencyContacts set"
-        notification.body = "Please check your settings and chooese Emergency Contacts"
+        notification.title = "No Emergency Contacts set"
+        notification.body = "Please check your settings and choose your Emergency Contacts!"
         
         let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
         let request = UNNotificationRequest(identifier: "NoSettingNotif", content: notification, trigger: notificationTrigger)

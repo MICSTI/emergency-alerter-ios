@@ -55,6 +55,7 @@ class MessageViewController: UIViewController, MFMessageComposeViewControllerDel
         sendMessage()
         
     }
+    //Call to MessageView to send SMS
     func sendMessage(){
         let messageVC = MFMessageComposeViewController()
         messageVC.body = "I need help"

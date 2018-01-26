@@ -11,8 +11,6 @@ import ContactsUI
 
 class SettingsViewController: UITableViewController, CNContactPickerDelegate {
     
-   
-    
     @IBOutlet weak var addContact: UIButton!
     
     // Emergency Contacts in List
@@ -23,7 +21,6 @@ class SettingsViewController: UITableViewController, CNContactPickerDelegate {
         //Fill Emergency Contact list from storage
         getContactsFromStore()
    
-     
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,10 +32,12 @@ class SettingsViewController: UITableViewController, CNContactPickerDelegate {
         return 1
     }
     
+    //For the table -> Number of entries
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return people.count
     }
     
+    //Table: Content of Cells
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell")! //1.
         let text = people[indexPath.row].value(forKey: "name") as! String //2.
@@ -46,13 +45,12 @@ class SettingsViewController: UITableViewController, CNContactPickerDelegate {
         return cell //4.
     }
     
+    //Use ContactPicker
     @IBAction func buttonTapped(_ sender: UIButton) {
         let contactPicker = CNContactPickerViewController()
         contactPicker.delegate = self
         contactPicker.displayedPropertyKeys = [CNContactGivenNameKey, CNContactPhoneNumbersKey]
         self.present(contactPicker, animated: true, completion: nil)
-        
-        
         
     }
     
@@ -75,23 +73,15 @@ class SettingsViewController: UITableViewController, CNContactPickerDelegate {
             UIApplication.shared.delegate as? AppDelegate else {
                 return
         }
-        
         // 1
-        let managedContext =
-            appDelegate.persistentContainer.viewContext
-        
+        let managedContext = appDelegate.persistentContainer.viewContext
         // 2
-        let entity =
-            NSEntityDescription.entity(forEntityName: "EmergencyContact",
-                                       in: managedContext)!
+        let entity = NSEntityDescription.entity(forEntityName: "EmergencyContact", in: managedContext)!
         if(!contactExists(telephone: firstPhoneNumber.stringValue)){
-            let person = NSManagedObject(entity: entity,
-                                     insertInto: managedContext)
-        
+            let person = NSManagedObject(entity: entity, insertInto: managedContext)
             // 3
             person.setValue(userName, forKeyPath: "name")
             person.setValue(firstPhoneNumber.stringValue, forKey: "telephoneNumber")
-        
             // 4
             do {
                 try managedContext.save()
@@ -104,7 +94,7 @@ class SettingsViewController: UITableViewController, CNContactPickerDelegate {
     }
     
     func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
-        
+       // Do Nothing on cancel
     }
     
     func getContactsFromStore() {

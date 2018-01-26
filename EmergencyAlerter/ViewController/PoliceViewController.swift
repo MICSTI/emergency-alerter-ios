@@ -56,6 +56,7 @@ class PoliceViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         // Dispose of any resources that can be recreated.
     }
     
+    //Drawing the map
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print(locations)
         
@@ -77,14 +78,22 @@ class PoliceViewController: UIViewController, MKMapViewDelegate, CLLocationManag
             originalLocation = currentLocation
             //Reset Map, Remove markers
             self.map.removeAnnotations(allAnnotations)
-            policeLoader.loadFromInternet(current: CurrentLocation(lat,lon)) { (polices, err) in
-                for police in polices! {
-                    let policeLabel = MKPointAnnotation()
-                    policeLabel.coordinate = CLLocationCoordinate2D(latitude: police.latitude!, longitude: police.longitude!)
-                    policeLabel.title = police.name
-                    self.map.addAnnotation(policeLabel)
+            
+            //Use Grand Central Dispatch for Async load of Webservice
+            //AlamoFire itself already uses it, this is here for learning and presentation purposes
+            DispatchQueue.global(qos: .userInitiated).async {
+                DispatchQueue.main.async {
+                    self.policeLoader.loadFromInternet(current: CurrentLocation(lat,lon)) { (polices, err) in
+                        for police in polices! {
+                            let policeLabel = MKPointAnnotation()
+                            policeLabel.coordinate = CLLocationCoordinate2D(latitude: police.latitude!, longitude: police.longitude!)
+                            policeLabel.title = police.name
+                            self.map.addAnnotation(policeLabel)
+                        }
+                    }
                 }
             }
+            
         }
         
         //Update current user location

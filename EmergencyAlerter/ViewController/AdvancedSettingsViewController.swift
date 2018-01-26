@@ -33,13 +33,10 @@ class AdvancedSettingsViewController: UIViewController, UITextFieldDelegate {
             emergencyNumberField.text = "911"
             setPreferenceValue(key: "emergencyNumber", value: "911")
         }
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @objc func shakeSwitchChanged(mySwitch: UISwitch) {
@@ -58,6 +55,7 @@ class AdvancedSettingsViewController: UIViewController, UITextFieldDelegate {
 
     }
     
+    //Save Preferences in UserDefaults Storage
     func setPreferenceValue(key: String, value: Any) {
         defaults.set(value, forKey: key)
         defaults.synchronize()
@@ -65,10 +63,8 @@ class AdvancedSettingsViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func emergencyNumberChanged(_ sender: Any) {
         let value = emergencyNumberField.text;
-        print("changed")
         setPreferenceValue(key: "emergencyNumber", value: value ?? "911")
     }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return true

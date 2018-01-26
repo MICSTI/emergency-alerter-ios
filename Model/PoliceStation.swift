@@ -11,7 +11,6 @@ import ObjectMapper
 
 public class PoliceStation : Mappable {
     
-    
      var name: String?;
      var latitude: Double?;
      var longitude: Double?;
