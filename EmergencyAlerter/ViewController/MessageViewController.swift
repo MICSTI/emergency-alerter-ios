@@ -57,8 +57,9 @@ class MessageViewController: UIViewController, MFMessageComposeViewControllerDel
     }
     //Call to MessageView to send SMS
     func sendMessage(){
+        let currentLocation = LocationHelper.sharedInstance.currentLocation
         let messageVC = MFMessageComposeViewController()
-        messageVC.body = "I need help"
+        messageVC.body = "I need help. Here are my current coordinates: \(currentLocation?.coordinate.latitude) / \(currentLocation?.coordinate.longitude)"
         messageVC.recipients = people.map({(contact: NSManagedObject ) -> String in
             let cnt = contact as! EmergencyContact
             print("\(cnt.telephoneNumber!)")

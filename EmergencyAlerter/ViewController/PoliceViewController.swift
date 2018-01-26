@@ -24,29 +24,25 @@ class CurrentLocation: LocationAware{
     }
 }
 
-class PoliceViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class PoliceViewController: UIViewController, MKMapViewDelegate, LocationHelperDelegate {
+    
     
     @IBOutlet weak var map: MKMapView!
     
     let policeLoader = PoliceLoader("https://crpladev-emal.herokuapp.com/api/nearest/police");
-    var locationManager = CLLocationManager()
     
     var policeStations = [PoliceStation] ()
-    var currentLocation = CLLocation(latitude: 0.0, longitude: 0.0)
     var originalLocation = CLLocation(latitude: 0.0, longitude: 0.0)
     var myPosLabel = MKPointAnnotation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Init locationmanager
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
+        //Init locationhelper
+        LocationHelper.sharedInstance.delegate = self
         
         //Init map
         let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
-        let location = CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
+        let location = CLLocationCoordinate2D(latitude: originalLocation.coordinate.latitude, longitude: originalLocation.coordinate.longitude)
         let region = MKCoordinateRegion(center: location, span: span)
         self.map.setRegion(region, animated: true)
     }
@@ -56,19 +52,12 @@ class PoliceViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         // Dispose of any resources that can be recreated.
     }
     
-    //Drawing the map
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print(locations)
+    
+    func tracingLocation(_ currentLocation: CLLocation) {
         
         let allAnnotations = self.map.annotations
-        let userLocation: CLLocation = locations[0]
-        
-        //Update position only if user moved
-        if(userLocation.distance(from: currentLocation) < 2) {
-            return
-        }
-        currentLocation = userLocation
-        let lat = userLocation.coordinate.latitude
+        let userLocation: CLLocation = currentLocation
+                let lat = userLocation.coordinate.latitude
         let lon = userLocation.coordinate.longitude
         
         //Reload police stations only if user travelled more than 200m. Saves energy because of less network calls
@@ -102,6 +91,12 @@ class PoliceViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         myPosLabel.title = "You are here"
         self.map.addAnnotation(myPosLabel)
     }
+    
+    func tracingLocationDidFailWithError(_ error: NSError) {
+        print("Error while tracing location: \(error.description)")
+    }
+    
+   
    
     
 }

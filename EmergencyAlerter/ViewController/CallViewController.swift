@@ -12,6 +12,7 @@ import UserNotifications
 import CoreData
 
 class CallViewController: UIViewController, UNUserNotificationCenterDelegate {
+  
     
     @IBOutlet weak var CallButton: UIButton!
     
@@ -22,10 +23,9 @@ class CallViewController: UIViewController, UNUserNotificationCenterDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         UNUserNotificationCenter.current().delegate = self
-        
+        checkIfContactsSet()
         // add click target to call button
         CallButton.addTarget(self, action: #selector(self.callButtonClicked), for: .touchUpInside)        
-        initNotifSetupCheck()
     }
     
     override func didReceiveMemoryWarning() {
