@@ -32,7 +32,7 @@ class PoliceViewController: UIViewController, MKMapViewDelegate, LocationHelperD
     let policeLoader = PoliceLoader("https://crpladev-emal.herokuapp.com/api/nearest/police");
     
     var policeStations = [PoliceStation] ()
-    var originalLocation = CLLocation(latitude: 0.0, longitude: 0.0)
+    var originalLocation = LocationHelper.sharedInstance.currentLocation ??  CLLocation(latitude: 47.4433, longitude: 15.2792)
     var myPosLabel = MKPointAnnotation()
     
     override func viewDidLoad() {
@@ -42,7 +42,7 @@ class PoliceViewController: UIViewController, MKMapViewDelegate, LocationHelperD
         
         //Init map
         let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
-        let location = CLLocationCoordinate2D(latitude: originalLocation.coordinate.latitude, longitude: originalLocation.coordinate.longitude)
+        let location = originalLocation.coordinate
         let region = MKCoordinateRegion(center: location, span: span)
         self.map.setRegion(region, animated: true)
     }
