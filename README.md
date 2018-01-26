@@ -24,6 +24,6 @@ For retrieving the nearby police stations, the app uses an API backend service. 
 
 # Who has developed this awesome app?
 This app was developed by three students as part a university lecture.
+- Arlinda Butja
 - Florian Mayerhofer
 - Michael Stifter
-- Arlinda Butja
